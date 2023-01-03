@@ -1,5 +1,6 @@
+import Layout from '../common/Layout';
 function Join() {
-	return <div>Join</div>;
+	return <Layout name={'MEMBERSHIP'} subtit={'회원가입'}></Layout>;
 }
 
 export default Join;

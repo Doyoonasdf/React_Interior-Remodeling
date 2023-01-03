@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+$tablet: 1179px;
+//태블릿 540
+$mobile: 539px;
+//모바일 320기준으로 맞춰서하고
+
+//common
+@import 'common/footer';
+@import 'common/header';
+@import 'common/reset';
+@import 'common/layout';
+
+//main
+@import 'main/visual';
+@import 'main/information';
+@import 'main/latestProjects';
+@import 'main/services';
+
+//sub
+@import 'sub/community';
+@import 'sub/department';
+@import 'sub/gallery';
+@import 'sub/join';
+@import 'sub/location';
+@import 'sub/youtube';

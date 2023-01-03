@@ -1,0 +1,28 @@
+.content {
+	width: 100%;
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+		min-height: 500px;
+		padding: 0px 0 150px;
+		h1 {
+			font-weight: bold;
+			font-size: 50px;
+			color: #000;
+			margin-bottom: 70px;
+			span {
+				font-family: 'BlackHanSans';
+				font-weight: bold;
+				font-size: 20px;
+				line-height: 1px;
+				color: #aaa;
+				&::before {
+					content: '/';
+					font-weight: normal;
+					margin-right: 20px;
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+}
