@@ -1,0 +1,34 @@
+{
+  "mainservice": [
+    {
+      "pic": "index_services1.jpg",
+      "name": "Living-room",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus ipsa excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnistiis! Consequuntur voluptatum omnis culpa dolorem laboriosam molestiae excepum omnis cuneque non optio eligendi?"
+    },
+    {
+      "pic": "index_services2.jpg",
+      "name": "Kitchen",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus ipsa excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnistiis! Consequuntur voluptatum omnis culpa dolorem laboriosam molestiae excepum omnis culpa dolorem laboriosam molestiae"
+    },
+    {
+      "pic": "index_services3.jpg",
+      "name": "Bed-Room",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus ipsa excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnis culpa dolorem laboriosam molestiae neque non optio eligendi?"
+    },
+    {
+      "pic": "index_services4.jpg",
+      "name": "Nursery-Room",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus ipsaatibus at ducimus ipsaLorem ipsum dolor sit amet consectetur adipisicin excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnis culpa dolorem laboriosam molestiae neque non optio eligendi?"
+    },
+    {
+      "pic": "index_services5.jpg",
+      "name": "Bathroom",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus atatibus at ducimus ipsaLorem ipsum dolor sit amet consectetur dipisicinatibus at ducimus ipsaLorem ipsum dolor sit amet consectetur adipisicin ducimus ipsa excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum"
+    },
+    {
+      "pic": "index_services6.jpg",
+      "name": "Front door",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus ipsaLorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus ipsaLorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at"
+    }
+  ]
+}
