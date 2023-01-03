@@ -4,18 +4,18 @@ import { Link, NavLink } from 'react-router-dom';
 function Services() {
 	const [Mainservice, setMainservice] = useState([]);
 
-	const tabBtn = useRef(null);
-	const pos = useRef([]);
+	// const tabBtn = useRef(null);
+	// const pos = useRef([]);
 
-	const btns = tabBtn.current.children;
-	const boxes = tabBtn.current.children;
+	// const btns = tabBtn.current.children;
+	// const boxes = tabBtn.current.children;
 	//
-	pos.current.forEach((pos, idx) => {
-		for (const btn of btns) btn.classList.remove('on');
-		for (const box of boxes) box.classList.remove('on');
-		btns[idx].classList.add('on');
-		boxes.classList.add('on');
-	});
+	// pos.current.forEach((pos, idx) => {
+	// 	for (const btn of btns) btn.classList.remove('on');
+	// 	for (const box of boxes) box.classList.remove('on');
+	// 	btns[idx].classList.add('on');
+	// 	boxes.classList.add('on');
+	// });
 
 	useEffect(() => {
 		axios.get(`${process.env.PUBLIC_URL}/DB/mainservice.json`).then((json) => {
@@ -49,13 +49,15 @@ function Services() {
 						</div>
 						<div className='inner'>
 							<div className='wrapUl'>
-								<ul ref={tabBtn}>
+								{/* <ul ref={tabBtn}> */}
+								<ul>
 									<li key={idx} className={isOn} onClick={active}>
 										<Link to='#'>{data.name}</Link>
 									</li>
 								</ul>
 							</div>
-							<div className='wrapArc' ref={tabBtn}>
+							{/* <div className='wrapArc' ref={tabBtn}> */}
+							<div className='wrapArc'>
 								<article key={idx} className={isOn} onClick={on}>
 									<div className='pic'>
 										<img src={`${process.env.PUBLIC_URL}/img/${data.pic}`} alt={data.name} />
