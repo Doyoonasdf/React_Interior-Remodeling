@@ -8,6 +8,7 @@ function LatestProjects() {
 					<div className='wrap'>
 						<article>
 							<img
+							// 이미지오류남
 							// src={`${process.env.PUBLIC_URL}/img/${index_LatestProjects / LatsetProjects1.jpg}`}
 							// alt='gallery'
 							/>
