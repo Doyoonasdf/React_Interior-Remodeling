@@ -9,7 +9,7 @@ function Services() {
 
 	const btns = tabBtn.current.children;
 	const boxes = tabBtn.current.children;
-
+	//
 	pos.current.forEach((pos, idx) => {
 		for (const btn of btns) btn.classList.remove('on');
 		for (const box of boxes) box.classList.remove('on');
