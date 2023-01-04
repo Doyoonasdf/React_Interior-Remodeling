@@ -42,14 +42,15 @@
 						text-align: center;
 						transition: all 0.3s;
 					}
-					// &.on { //액티브스타일
-					// 	//li가 활성화 되었을때
-					// 	a {
-					// 		//그때의 a태그
-					// 		color: rgba(235, 213, 69, 0.989);
-					// 		scale: (1.2);
-					// 	}
-					// }
+					&.on {
+						//액티브스타일
+						//li가 활성화 되었을때
+						a {
+							//그때의 a태그
+							color: rgba(235, 213, 69, 0.989);
+							scale: (1.2);
+						}
+					}
 				}
 			}
 		}
@@ -126,11 +127,11 @@
 						}
 					}
 				}
-				// &.on {
-				// 	display: flex;
-				// 	opacity: 1;
-				// 	visibility: visible;
-				// }
+				&.on {
+					display: flex;
+					opacity: 1;
+					visibility: visible;
+				}
 			}
 		}
 	}
