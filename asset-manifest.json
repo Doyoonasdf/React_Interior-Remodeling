@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/React_Interior-Remodeling/static/css/main.8978ef76.css",
-    "main.js": "/React_Interior-Remodeling/static/js/main.c9a1bead.js",
+    "main.css": "/React_Interior-Remodeling/static/css/main.a9893fda.css",
+    "main.js": "/React_Interior-Remodeling/static/js/main.7e44031a.js",
     "static/media/visual1.jpg": "/React_Interior-Remodeling/static/media/visual1.5457bcc6a86fd79c1796.jpg",
     "static/media/visual3.jpg": "/React_Interior-Remodeling/static/media/visual3.1d4377c7cd03fd755dbb.jpg",
     "static/media/visual2.jpg": "/React_Interior-Remodeling/static/media/visual2.cd2c668da74cd87985b2.jpg",
     "index.html": "/React_Interior-Remodeling/index.html",
-    "main.8978ef76.css.map": "/React_Interior-Remodeling/static/css/main.8978ef76.css.map",
-    "main.c9a1bead.js.map": "/React_Interior-Remodeling/static/js/main.c9a1bead.js.map"
+    "main.a9893fda.css.map": "/React_Interior-Remodeling/static/css/main.a9893fda.css.map",
+    "main.7e44031a.js.map": "/React_Interior-Remodeling/static/js/main.7e44031a.js.map"
   },
   "entrypoints": [
-    "static/css/main.8978ef76.css",
-    "static/js/main.c9a1bead.js"
+    "static/css/main.a9893fda.css",
+    "static/js/main.7e44031a.js"
   ]
 }
