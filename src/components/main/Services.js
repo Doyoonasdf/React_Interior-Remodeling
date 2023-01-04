@@ -60,7 +60,10 @@ function Services() {
 							<div className='wrapArc'>
 								<article key={idx} className={isOn} onClick={on}>
 									<div className='pic'>
-										<img src={`${process.env.PUBLIC_URL}/img/${data.pic}`} alt={data.name} />
+										<img
+											src={`${process.env.PUBLIC_URL}/img/index_services/${data.pic}`}
+											alt={data.name}
+										/>
 									</div>
 									<div className='txt'>
 										<h2>{data.name}</h2>
