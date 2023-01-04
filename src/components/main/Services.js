@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 function Services() {
 	const [Mainservice, setMainservice] = useState([]);
-
+	const [Index, setIndex] = useState(0);
 	// useEffect(() => {
 	// 	axios.get(`${process.env.PUBLIC_URL}/DB/mainservice.json`).then((json) => {
 	// 		// console.log(json.data.mainservice);
@@ -41,9 +41,11 @@ function Services() {
 				<div className='wrapUl'>
 					<ul>
 						{Mainservice.map((data, idx) => {
+							let isOn = '';
+							Index === idx && (isOn = 'on');
 							return (
 								// <li key={idx} className={isOn} onClick={active}>
-								<li key={idx}>
+								<li key={idx} className={isOn} onClick={() => setIndex(idx)}>
 									<Link to='#'>{data.name}</Link>
 								</li>
 							);
@@ -53,9 +55,11 @@ function Services() {
 
 				<div className='wrapArc'>
 					{Mainservice.map((data, idx) => {
+						let isOn = '';
+						Index === idx && (isOn = 'on');
 						return (
 							// <article key={idx} className={isOn} onClick={on}>
-							<article key={idx}>
+							<article key={idx} className={isOn} onClick={() => setIndex(idx)}>
 								<div className='pic'>
 									<img
 										src={`${process.env.PUBLIC_URL}/img/index_services/${data.pic}`}
