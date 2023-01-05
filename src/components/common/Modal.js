@@ -1,28 +1,45 @@
-import { forwardRef, useImperativeHandle, useState } from 'react';
+import { useEffect, forwardRef, useState, useImperativeHandle } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Modal = forwardRef((props, el) => {
 	const [Open, setOpen] = useState(false);
-	// const [Index, setIndex] = useState(0);
 	useImperativeHandle(el, () => {
-		return {
-			open: () => setOpen(true),
-			index: () => props.setIndex(0),
-		};
+		return { open: () => setOpen(true) };
 	});
 
+	useEffect(() => {
+		Open ? (document.body.style.overflow = 'hidden') : (document.body.style.overflow = 'auto');
+	}, [Open]);
+
 	return (
-		<>
+		<AnimatePresence>
 			{Open && (
-				<aside>
-					<iframe
-					// setOpen={setOpen}
-					// title={vidList[0].id}
-					// src={`https://www.youtube.com/embed/${vidList[index].snippet.resourceId.videoId}`}
-					></iframe>
-					<span onClick={() => setOpen(false)}>close</span>
-				</aside>
+				<motion.aside
+					className='modal'
+					initial={{ opacity: 0, scale: 0, rotate: 45 }}
+					animate={{ opacity: 1, scale: 1, rotate: 0, transition: { duration: 1 } }}
+					exit={{ opacity: 0, x: '50%', transition: { duration: 0.5, delay: 0.5 } }}
+				>
+					<motion.div
+						className='con'
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1, transition: { delay: 1 } }}
+						exit={{ opacity: 0 }}
+					>
+						{props.children}
+					</motion.div>
+					<motion.span
+						initial={{ opacity: 0, x: 100 }}
+						animate={{ opacity: 1, x: 0, transition: { delay: 1 } }}
+						exit={{ opacity: 0, x: 100 }}
+						className='close'
+						onClick={() => setOpen(false)}
+					>
+						X
+					</motion.span>
+				</motion.aside>
 			)}
-		</>
+		</AnimatePresence>
 	);
 });
 export default Modal;

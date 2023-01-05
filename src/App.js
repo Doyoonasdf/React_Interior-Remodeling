@@ -18,26 +18,14 @@ import Result from './components/sub/Result';
 import Result2 from './components/sub/Result2';
 
 import './scss/style.scss';
-import Information from './components/main/Information';
-import LatestProjects from './components/main/LatestProjects';
-import Services from './components/main/Services';
-import Visual from './components/main/Visual';
 
 function App() {
 	return (
 		<>
 			<Switch>
-				<Route exact path='/'>
-					<Header type={'main'} />
-					<Visual />
-					<Information />
-					<Services />
-					<LatestProjects />
-				</Route>
+				<Route exact path='/' component={Main} />
 
-				<Route path='/'>
-					<Header type={'sub'} />
-				</Route>
+				<Route path='/' render={() => <Header type={'sub'} />} />
 			</Switch>
 
 			<Route path='/community' component={Community} />

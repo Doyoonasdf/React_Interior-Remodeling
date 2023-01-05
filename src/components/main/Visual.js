@@ -1,6 +1,6 @@
 function Visual() {
 	return (
-		<figure id='visual'>
+		<figure id='visual' className='scroll_view'>
 			<article className='slider'>
 				<div className='inner'>
 					<h1>A BUILDER YOU CAN TRUST</h1>

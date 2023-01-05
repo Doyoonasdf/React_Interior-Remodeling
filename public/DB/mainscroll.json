@@ -1,0 +1,16 @@
+{
+  "mainscroll": [
+    {
+      "name": "HOME"
+    },
+    {
+      "name": "SERVICES"
+    },
+    {
+      "name": "NEWS"
+    },
+    {
+      "name": "PROJECTS"
+    }
+  ]
+}

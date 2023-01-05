@@ -1,0 +1,88 @@
+.Community {
+	> .inner {
+		.inputBox {
+			width: 100%;
+			border: 1px solid #bbb;
+			padding: 50px;
+			margin-bottom: 50px;
+
+			input[type='text'],
+			textarea {
+				width: 50%;
+				padding: 8px 10px;
+				border: 1px solid #aaa;
+				margin-bottom: 20px;
+				resize: none;
+			}
+
+			.btnSet {
+				button {
+					width: 150px;
+					height: 30px;
+					display: inline-block;
+					border: none;
+					background: #555;
+					color: #fff;
+					cursor: pointer;
+					margin-right: 20px;
+				}
+			}
+		}
+
+		.showBox {
+			width: 100%;
+			border: 1px solid #bbb;
+			padding: 50px;
+
+			article {
+				background: #fff;
+				padding: 30px;
+				margin-bottom: 40px;
+				display: flex;
+				justify-content: space-between;
+				align-content: center;
+				flex-wrap: wrap;
+
+				.txt {
+					width: calc(100% - 170px);
+					h2 {
+						margin-bottom: 10px;
+					}
+
+					input,
+					textarea {
+						width: 100%;
+						padding: 8px 10px;
+						border: 1px solid lightblue;
+						margin-bottom: 20px;
+						background: #e9faff;
+					}
+					textarea {
+						margin-bottom: 0;
+					}
+				}
+				.btnSet {
+					width: 120px;
+					display: flex;
+					align-items: center;
+					margin-top: 20px;
+					justify-content: flex-end;
+					gap: 10px;
+
+					button {
+						background: transparent;
+						cursor: pointer;
+						border: none;
+
+						&:nth-of-type(1) {
+							color: orange;
+						}
+						&:nth-of-type(2) {
+							color: orangered;
+						}
+					}
+				}
+			}
+		}
+	}
+}

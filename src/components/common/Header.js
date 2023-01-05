@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 function Header({ type }) {
 	const active = {};
 	return (
-		<header id='header' className={`scroll_view on ${type}`}>
+		<header id='header' className={`on ${type}`}>
 			<div className='inner'>
 				<h1>
 					<Link to='/'>SMK</Link>

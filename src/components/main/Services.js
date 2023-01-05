@@ -44,7 +44,6 @@ function Services() {
 							let isOn = '';
 							Index === idx && (isOn = 'on');
 							return (
-								// <li key={idx} className={isOn} onClick={active}>
 								<li key={idx} className={isOn} onClick={() => setIndex(idx)}>
 									<Link to='#'>{data.name}</Link>
 								</li>
@@ -59,7 +58,7 @@ function Services() {
 						Index === idx && (isOn = 'on');
 						return (
 							// <article key={idx} className={isOn} onClick={on}>
-							<article key={idx} className={isOn} onClick={() => setIndex(idx)}>
+							<article key={idx} className={isOn}>
 								<div className='pic'>
 									<img
 										src={`${process.env.PUBLIC_URL}/img/index_services/${data.pic}`}

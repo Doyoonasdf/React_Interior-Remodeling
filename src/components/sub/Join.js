@@ -100,8 +100,8 @@ function Join() {
 
 	//약관동의
 	const handleAgree = (e) => {
-		let isChecked = false;
 		const { name } = e.target;
+		const isChecked = e.target.checked;
 		setVal({ ...Val, [name]: isChecked });
 	};
 

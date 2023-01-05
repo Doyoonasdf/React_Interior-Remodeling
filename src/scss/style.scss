@@ -9,12 +9,14 @@ $mobile: 539px;
 @import 'common/header';
 @import 'common/reset';
 @import 'common/layout';
-
+@import 'common/modal';
 //main
 @import 'main/visual';
 @import 'main/information';
 @import 'main/latestProjects';
 @import 'main/services';
+@import 'main/news';
+@import 'main/scroll';
 
 //sub
 @import 'sub/community';

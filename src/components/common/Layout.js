@@ -1,7 +1,7 @@
 function Layout(props) {
 	return (
 		<section className={`content ${props.name}`}>
-			<div className='inner'>
+			<div className='inner scroll_view'>
 				<h1>
 					{props.h1name}
 					<span>{props.subtit}</span>

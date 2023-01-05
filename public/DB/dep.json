@@ -1,0 +1,60 @@
+{
+  "dep": [
+    {
+      "pic": "회사창립.png",
+      "tit": "창립년도",
+      "num": "300",
+      "unitnouns": "년"
+    },
+    {
+      "pic": "직원수.png",
+      "tit": "직원 수",
+      "num": "1",
+      "unitnouns": "명"
+    },
+    {
+      "pic": "성장률.png",
+      "tit": "연간 성장률",
+      "num": "300",
+      "unitnouns": "%"
+    },
+    {
+      "pic": "특허등록.png",
+      "tit": "특허 등록",
+      "num": "1",
+      "unitnouns": "개"
+    },
+    {
+      "pic": "프로젝트달성.png",
+      "tit": "프로젝트달성",
+      "num": "300",
+      "unitnouns": "개"
+    },
+    {
+      "pic": "매출액.png",
+      "tit": "매출액 달성",
+      "num": "300",
+      "unitnouns": "억"
+    },
+    {
+      "post": "부장",
+      "name": "NAME",
+      "picmember": "member6.jpg"
+    },
+    {
+      "post": "부장",
+      "name": "NAME",
+      "picmember": "member6.jpg"
+    },
+    {
+      "post": "부장",
+      "name": "NAME",
+      "picmember": "member6.jpg"
+    },
+    {
+      "post": "부장",
+      "name": "NAME",
+      "picmember": "member6.jpg"
+    }
+  ]
+}
