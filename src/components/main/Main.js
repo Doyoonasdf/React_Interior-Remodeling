@@ -4,6 +4,8 @@ import LatestProjects from './LatestProjects';
 import Services from './Services';
 import Visual from './Visual';
 import News from './News';
+import Pics from './Pics';
+import Vids from './Vids';
 import Scroll from './Scroll';
 import { useState, useEffect } from 'react';
 
@@ -19,6 +21,8 @@ function Main() {
 			<Services />
 			<News Scrolled={Scrolled} currentPos={Pos[2]} />
 			<LatestProjects />
+			<Pics />
+			<Vids />
 			<Scroll setScrolled={setScrolled} setPos={setPos} />
 		</main>
 	);

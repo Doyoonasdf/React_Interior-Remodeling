@@ -19,8 +19,18 @@ import Result2 from './components/sub/Result2';
 
 import './scss/style.scss';
 
+import { fetchYoutube } from './redux/youtubeSlice';
+import { fetchFlickr } from './redux/flickrSlice';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+
 function App() {
+	const dispatch = useDispatch();
 	const menuOpen = useRef(null);
+	useEffect(() => {
+		dispatch(fetchYoutube());
+		dispatch(fetchFlickr({ type: 'user', user: '197146982@N03' }));
+	}, [dispatch]);
 	return (
 		<>
 			<Switch>

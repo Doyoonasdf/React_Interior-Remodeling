@@ -86,11 +86,11 @@ function Department(end, start = 0, duration = 1000) {
 					</article>
 
 					<article>
-						<img
+						{/* <img
 							src={path + 'img/index_LatestProjects/Home - BDS Contract.jpg'}
 							alt='galleryPreview1'
 						/>
-						<Link to='/Gallery'>VIEW MORE</Link>
+						<Link to='/Gallery'>VIEW MORE</Link> */}
 					</article>
 				</div>
 			</div>

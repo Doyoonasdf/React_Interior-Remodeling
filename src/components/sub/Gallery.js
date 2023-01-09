@@ -1,51 +1,25 @@
 import Layout from '../common/Layout';
 import { useEffect, useState, useRef } from 'react';
-import axios from 'axios';
+
 import Masonry from 'react-masonry-component';
 
 import Modal from '../common/Modal';
+import { fetchFlickr } from '../../redux/flickrSlice';
+import { useSelector, useDispatch } from 'react-redux';
 
 function Gallery() {
+	const dispatch = useDispatch();
 	const myId = '197146982@N03';
 	const masonryOptions = { transitionDuration: '0.5s' };
 	const frame = useRef(null);
 	const input = useRef(null);
 	const modal = useRef(null);
-	const [Items, setItems] = useState([]);
+
 	const [Loading, setLoading] = useState(true);
 	const [Index, setIndex] = useState(0);
-
-	const getFlickr = async (opt) => {
-		const baseURL = 'https://www.flickr.com/services/rest/?format=json&nojsoncallback=1';
-		const key = 'e95ee7e806026c7c04df570c669b6630';
-		const method_sample = 'flickr.favorites.getList';
-		const method_search = 'flickr.photos.search';
-		const method_user = 'flickr.people.getPhotos';
-		const num = 20;
-		let url = '';
-
-		if (opt.type === 'search')
-			url = `${baseURL}&method=${method_search}&api_key=${key}&per_page=${num}&tags=${opt.tags}`;
-		if (opt.type === 'user')
-			url = `${baseURL}&method=${method_user}&api_key=${key}&per_page=${num}&user_id=${opt.user}`;
-		if (opt.type === 'sample')
-			url = `${baseURL}&method=${method_sample}&api_key=${key}&per_page=${num}&user_id=${opt.user}`;
-
-		const result = await axios.get(url);
-		if (result.data.photos.photo.length === 0) {
-			frame.current.classList.add('on');
-			setLoading(false);
-			return alert('해당  검색어의 결과 이미지가 없습니다.');
-		}
-		setItems(result.data.photos.photo);
-
-		setTimeout(() => {
-			frame.current.classList.add('on');
-			setLoading(false);
-		}, 500);
-	};
+	const Items = useSelector((store) => store.flickr.data);
 	const showSample = () => {
-		getFlickr({ type: 'sample', user: myId });
+		dispatch(fetchFlickr({ type: 'sample' }));
 		frame.current.classList.remove('on');
 		setLoading(true);
 	};
@@ -53,19 +27,22 @@ function Gallery() {
 		const result = input.current.value.trim();
 		if (!result) return alert('검색어를 입력하세요');
 		input.current.value = '';
-		getFlickr({ type: 'search', tags: result });
+		dispatch(fetchFlickr({ type: 'search', tags: result }));
 		frame.current.classList.remove('on');
 		setLoading(true);
 	};
 	const showMine = () => {
-		getFlickr({ type: 'user', user: myId });
+		dispatch(fetchFlickr({ type: 'user', user: myId }));
 		frame.current.classList.remove('on');
 		setLoading(true);
 	};
 
 	useEffect(() => {
-		getFlickr({ type: 'user', user: myId });
-	}, []);
+		setTimeout(() => {
+			frame.current.classList.add('on');
+			setLoading(false);
+		}, 500);
+	}, [Items]);
 
 	return (
 		<>
