@@ -2,6 +2,7 @@ import Layout from '../common/Layout';
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import Masonry from 'react-masonry-component';
+
 import Modal from '../common/Modal';
 
 function Gallery() {
@@ -17,6 +18,7 @@ function Gallery() {
 	const getFlickr = async (opt) => {
 		const baseURL = 'https://www.flickr.com/services/rest/?format=json&nojsoncallback=1';
 		const key = 'e95ee7e806026c7c04df570c669b6630';
+		const method_sample = 'flickr.favorites.getList';
 		const method_search = 'flickr.photos.search';
 		const method_user = 'flickr.people.getPhotos';
 		const num = 20;
@@ -26,6 +28,8 @@ function Gallery() {
 			url = `${baseURL}&method=${method_search}&api_key=${key}&per_page=${num}&tags=${opt.tags}`;
 		if (opt.type === 'user')
 			url = `${baseURL}&method=${method_user}&api_key=${key}&per_page=${num}&user_id=${opt.user}`;
+		if (opt.type === 'sample')
+			url = `${baseURL}&method=${method_sample}&api_key=${key}&per_page=${num}&user_id=${opt.user}`;
 
 		const result = await axios.get(url);
 		if (result.data.photos.photo.length === 0) {
@@ -40,7 +44,11 @@ function Gallery() {
 			setLoading(false);
 		}, 500);
 	};
-
+	const showSample = () => {
+		getFlickr({ type: 'sample', user: myId });
+		frame.current.classList.remove('on');
+		setLoading(true);
+	};
 	const showSearch = () => {
 		const result = input.current.value.trim();
 		if (!result) return alert('검색어를 입력하세요');
@@ -49,9 +57,8 @@ function Gallery() {
 		frame.current.classList.remove('on');
 		setLoading(true);
 	};
-
-	const showUser = (e) => {
-		getFlickr({ type: 'user', user: e.target.innerText });
+	const showMine = () => {
+		getFlickr({ type: 'user', user: myId });
 		frame.current.classList.remove('on');
 		setLoading(true);
 	};
@@ -59,17 +66,25 @@ function Gallery() {
 	useEffect(() => {
 		getFlickr({ type: 'user', user: myId });
 	}, []);
+
 	return (
 		<>
 			<Layout name={'gallery'} subtit={'OUR PROJECTS'}>
-				<div className='searchBox'>
-					<input
-						type='text'
-						ref={input}
-						placeholder='검색어를 입력하세요'
-						onKeyUp={(e) => e.key === 'Enter' && showSearch()}
-					/>
-					<button onClick={showSearch}>SEARCH</button>
+				<div className='controls'>
+					<div className='searchBox'>
+						<input
+							type='text'
+							ref={input}
+							placeholder='검색어를 입력하세요'
+							onKeyUp={(e) => e.key === 'Enter' && showSearch()}
+						/>
+						<button onClick={showSearch}>Search</button>
+					</div>
+
+					<nav>
+						<button onClick={showSample}>SAMPLE</button>
+						<button onClick={showMine}>PORTFOLIO</button>
+					</nav>
 				</div>
 
 				{Loading && (
@@ -111,7 +126,8 @@ function Gallery() {
 													)
 												}
 											/>
-											<span onClick={showUser}>{item.owner}</span>
+											{/* <span onClick={showUser}>{item.owner}</span> */}
+											<span>{item.owner}</span>
 										</div>
 									</div>
 								</article>

@@ -1,74 +1,55 @@
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-function Header({ type }) {
-	const active = {};
+function Header(props) {
+	const active = { color: '#ffb500' };
 	return (
-		<header id='header' className={`on ${type}`}>
-			<div className='inner'>
-				<h1>
-					<Link to='/'>SMK</Link>
-				</h1>
-				<nav className='menuWeb'>
+		<>
+			<header className={props.type}>
+				<div className='inner'>
+					<h1>
+						<NavLink exact to='/' activeStyle={active}>
+							MMA
+						</NavLink>
+					</h1>
 					<ul id='gnb'>
 						<li>
-							<NavLink to='/'>HOME</NavLink>
+							<NavLink to='/department' activeStyle={active}>
+								Department
+							</NavLink>
 						</li>
 						<li>
-							<NavLink to='/department'>DEPARTMENT</NavLink>
+							<NavLink to='/gallery' activeStyle={active}>
+								Gallery
+							</NavLink>
 						</li>
 						<li>
-							<NavLink to='/join'>JOIN</NavLink>
+							<NavLink to='/youtube' activeStyle={active}>
+								Youtube
+							</NavLink>
 						</li>
 						<li>
-							<NavLink to='/gallery'>GALLERY</NavLink>
+							<NavLink to='/community' activeStyle={active}>
+								Community
+							</NavLink>
 						</li>
 						<li>
-							<NavLink to='/community'>COMMUNITY</NavLink>
+							<NavLink to='/location' activeStyle={active}>
+								Location
+							</NavLink>
 						</li>
 						<li>
-							<NavLink to='/location'>CONTACT</NavLink>
-						</li>
-						<li>
-							<NavLink to='/youtube'>YOUTUBE</NavLink>
+							<NavLink to='/join' activeStyle={active}>
+								Membership
+							</NavLink>
 						</li>
 					</ul>
-				</nav>
-
-				<Link to='#' className='btnCall'>
-					<span>메뉴호출</span>
-				</Link>
-
-				<nav className='menuMo'>
-					<h1>
-						<Link to='/'>SMK</Link>
-						<span>INTERIOR DESIGN STUDIO</span>
-					</h1>
-					<ul id='gnbMo'>
-						<li>
-							<NavLink to='/'>HOME</NavLink>
-						</li>
-						<li>
-							<NavLink to='/department'>DEPARTMENT</NavLink>
-						</li>
-						<li>
-							<NavLink to='/join'>JOIN</NavLink>
-						</li>
-						<li>
-							<NavLink to='/gallery'>GALLERY</NavLink>
-						</li>
-						<li>
-							<NavLink to='/community'>COMMUNITY</NavLink>
-						</li>
-						<li>
-							<NavLink to='/location'>CONTACT</NavLink>
-						</li>
-						<li>
-							<NavLink to='/youtube'>YOUTUBE</NavLink>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</header>
+					{/* <span className='btnCall' onClick={() => props.menuOpen.current.toggle()}></span> */}
+					<FontAwesomeIcon icon={faBars} onClick={() => props.menuOpen.current.toggle()} />
+				</div>
+			</header>
+		</>
 	);
 }
 

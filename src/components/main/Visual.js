@@ -1,25 +1,16 @@
 function Visual() {
+	const path = process.env.PUBLIC_URL;
 	return (
 		<figure id='visual' className='scroll_view'>
-			<article className='slider'>
-				<div className='inner'>
-					<h1>A BUILDER YOU CAN TRUST</h1>
+			<h4>VAN GOGH</h4>
+			<div className='inner'>
+				<div className='pic'>
+					<img src='' alt='' />
 				</div>
-				<ul>
-					<li data-index='1'></li>
-					<li data-index='2'></li>
-					<li data-index='3'></li>
-				</ul>
-			</article>
-
-			<div className='Slide_btn'>
-				<a href='#' className='prev'>
-					<strong>PREV</strong>
-				</a>
-
-				<a href='#' className='next'>
-					<strong>NEXT</strong>
-				</a>
+				<div className='txt'>
+					<h2>MOR Museum Art</h2>
+					<h3> 2022.12.24 - 2023.03.26</h3>
+				</div>
 			</div>
 		</figure>
 	);

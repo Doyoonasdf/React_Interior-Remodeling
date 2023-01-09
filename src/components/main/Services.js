@@ -35,7 +35,7 @@ function Services() {
 	return (
 		<section id='services' className='scroll_view'>
 			<div className='innerH1'>
-				<h1>OUR SERVICES</h1>
+				<h1>OUR PROGRAMS</h1>
 			</div>
 			<div className='inner'>
 				<div className='wrapUl'>

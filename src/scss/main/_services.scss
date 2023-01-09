@@ -1,7 +1,7 @@
 #services {
 	width: 100%;
 	padding: 150px 0px 650px;
-	background-color: #efefef;
+	background-color: #fffcf0;
 	.innerH1 {
 		width: 1180px;
 		margin: 0 auto;
@@ -11,6 +11,7 @@
 			color: #555;
 			text-align: center;
 			letter-spacing: 1px;
+			margin-bottom: 50px;
 		}
 	}
 	.inner {
@@ -19,9 +20,8 @@
 			ul {
 				width: 100%;
 				display: flex;
-				justify-content: space-around;
+				justify-content: center;
 				align-items: center;
-				padding-top: 80px;
 
 				li {
 					// width: 100%;
@@ -41,6 +41,8 @@
 						color: rgba(0, 0, 0, 0.747);
 						text-align: center;
 						transition: all 0.3s;
+						background-color: #eee;
+						border-radius: 90%;
 					}
 					&.on {
 						//액티브스타일
@@ -61,7 +63,7 @@
 			article {
 				position: absolute;
 				top: 0;
-				left: 0;
+				left: 50px;
 				visibility: hidden;
 				overflow: hidden;
 				transition: 0.3s;
@@ -79,17 +81,19 @@
 					overflow: hidden;
 					height: 500px;
 					img {
-						width: 100%;
+						width: 80%;
 						height: 100%;
+						transform: translateX(25%);
 						object-fit: cover;
 						transition: 0.5s;
+						border-top-left-radius: 50%;
+						border-top-right-radius: 50%;
 					}
 				}
 				.txt {
-					float: left;
+					float: right;
 					width: 50%;
 					overflow: hidden;
-					background-color: rgba(235, 213, 69, 0.989);
 					padding: 60px 100px 60px 60px;
 					height: 500px;
 					position: relative;

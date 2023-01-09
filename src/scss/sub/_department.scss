@@ -1,0 +1,99 @@
+.department {
+	.introduce {
+		width: 100%;
+		position: relative;
+		h2 {
+			font-weight: bold;
+			font-size: 30px;
+			color: #444;
+			margin-bottom: 30px;
+		}
+		.list {
+			width: 100%;
+			display: flex;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin: 0px auto 150px;
+			li + li {
+				border-left: 1px solid #ddd;
+			}
+			li {
+				width: 180px;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				div {
+					width: 60px;
+					height: 60px;
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						transition: 0.5s;
+					}
+				}
+				span {
+					width: 100%;
+					font-size: 25px;
+					padding-top: 10px;
+					b {
+						font-size: 30px;
+					}
+				}
+				p {
+					width: 100%;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+	.owner {
+		width: 100%;
+		position: relative;
+		h2 {
+			font-weight: bold;
+			font-size: 30px;
+			color: #444;
+			margin-bottom: 30px;
+		}
+		article {
+			width: 100%;
+			height: 500px;
+			background-color: #fffcf0;
+			&::after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+			.txt {
+				float: left;
+				width: 580px;
+				overflow: hidden;
+				padding: 50px 50px;
+
+				h3 {
+					margin-bottom: 20px;
+					font-size: 25px;
+				}
+				p {
+					font-size: 18px;
+				}
+			}
+			.pic {
+				width: 580px;
+				height: 100%;
+				margin-right: 0;
+				float: right;
+				background-color: aliceblue;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+	}
+}

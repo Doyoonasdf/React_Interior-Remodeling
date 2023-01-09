@@ -1,159 +1,74 @@
 #information {
 	width: 100%;
-	padding-bottom: 150px;
+	height: 100vh;
+	position: relative;
+	padding: 150px 0px 150px;
+	background-color: #fffcf0;
 	.inner {
 		width: 1180px;
 		height: 100%;
 		margin: 0 auto;
 		position: relative;
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
 		padding: 10px;
-		.wrap {
-			//
-			width: 50%;
-			height: 100%;
-			margin-right: 20px;
-			h1 {
-				margin: 70px 0px 40px;
-				text-align: left;
-				font-weight: bold;
-				font-size: 50px;
-				line-height: 1px;
-				color: rgba(235, 213, 69, 0.989);
-			}
-			p {
-				font-weight: normal;
-				font-family: arial;
-				font-size: 20px;
-				letter-spacing: 1.3px;
-			}
-			a {
-				display: block;
-				width: 150px;
-				height: 40px;
-				border: 1px solid;
-
-				font-size: 15px;
-				line-height: 40px;
-				color: #fff;
-				text-align: center;
-				letter-spacing: 2px;
-				margin: 20px 0px 10px;
-				background-color: rgba(235, 213, 69, 0.989);
-				&:hover {
-					background: #fff;
-					color: rgba(235, 213, 69, 0.989);
-				}
-			}
+		h2 {
+			text-align: center;
+			font-weight: bold;
+			font-size: 50px;
+			color: #222;
+			margin-bottom: 50px;
 		}
-	}
+		.wrap {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
 
-	.QiuckJoin {
-		position: relative;
-		margin-top: -81px;
-		border-radius: 0px;
-		min-width: 500px;
-		width: 50%;
-		form {
-			h1 {
-				color: rgba(255, 255, 255, 0.735);
-				background-color: rgba(235, 213, 69, 0.989);
-				padding: 0px 40px 0px;
-				height: 70px;
-				line-height: 70px;
-				font-size: 30px;
-				letter-spacing: 1px;
-			}
-			fieldset {
-				padding: 15px;
-				border: 1px solid #555;
-				border-top: none;
-				table {
+			.pic {
+				width: 50%;
+				overflow: hidden;
+				height: 500px;
+				background-color: aliceblue;
+				img {
+					border-top-left-radius: 50%;
+					border-top-right-radius: 50%;
 					width: 100%;
-
-					th {
-						width: 40%;
-						padding: 30px 30px;
-						// font-weight: bold;
-						font-size: 20px;
-						line-height: 1px;
-						// border-bottom: 1px solids rgba(235, 213, 69, 0.989);
-						color: #666;
-						// border-right: 1px solid #bbb;
-						// border-bottom: 1px solid #bbb;
-						&:last-child {
-							border-bottom: none;
-						}
-						input[type='submit'] {
-							width: 150px;
-							height: 30px;
-							border: none;
-							margin-left: 40px;
-							background-color: rgba(28, 27, 23, 0.989);
-							cursor: pointer;
-							font-size: 14px;
-							line-height: 1px;
-							color: #fff;
-							margin-top: 20px;
-						}
-						p {
-							font-size: 12px;
-							font-family: 'BlackHanSans';
-							font-weight: bold;
-							color: red;
-							margin-top: 5px;
-							text-align: left;
-							padding-left: 13%;
-						}
-					}
-					td {
-						// border-bottom: 1px solid #bbb;
-						padding: 0px 30px;
-						background: white;
-
-						input[type='text'] {
-							width: 100%;
-							height: 40px;
-							border-top: none;
-							border-left: none;
-							border-right: none;
-							border-bottom: 1px solid rgba(235, 213, 69, 0.989);
-							background: none;
-							text-align: center;
-							font-weight: normal;
-							font-size: 16px;
-							line-height: 1px;
-						}
-						input[type='tel'],
-						#tell {
-							// width: calc(100% / 3);
-							width: 30%;
-							padding: 5px;
-							font-size: 14px;
-						}
-						p {
-							font-size: 12px;
-							font-family: 'BlackHanSans';
-							font-weight: bold;
-							color: red;
-							// color: pink;
-							margin-top: 5px;
-						}
-					}
+					height: 100%;
+					object-fit: cover;
+					transition: 0.5s;
 				}
-				label[for='agree'] {
+			}
+			.txt {
+				padding: 0px 50px;
+				width: 50%;
+				overflow: hidden;
+				position: relative;
+				height: 500px;
+				h2 {
+					color: #ffb500;
+					font-size: 50px;
+					margin-bottom: 20px;
+				}
+				p {
+					color: #222;
+					font-size: 20px;
+					margin-bottom: 50px;
+				}
+				span {
+					font-size: 18px;
+					color: #222;
+					font-weight: bold;
+				}
+				button {
+					padding: 15px 20px;
+					border: 1px solid #222;
+					background-color: #fff;
+					box-shadow: 4px 4px 5px 0px #222;
+					position: absolute;
+					bottom: 20px;
+					right: 0;
+					color: #222;
 					font-size: 16px;
-					text-align: left;
-					cursor: pointer;
-					// > p {
-					// 	font-size: 12px;
-					// 	font-family: 'BlackHanSans';
-					// 	font-weight: bold;
-					// 	color: red;
-					// 	margin-top: 5px;
-					// }
+					transition: 0.5s;
 				}
 			}
 		}

@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 $tablet: 1179px;
-//태블릿 540
-$mobile: 539px;
-//모바일 320기준으로 맞춰서하고
+
+$mobile: 674px;
 
 //common
 @import 'common/footer';
@@ -10,6 +9,7 @@ $mobile: 539px;
 @import 'common/reset';
 @import 'common/layout';
 @import 'common/modal';
+@import 'common/menu';
 //main
 @import 'main/visual';
 @import 'main/information';
