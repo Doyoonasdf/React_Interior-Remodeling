@@ -29,74 +29,66 @@ header {
 				}
 			}
 		}
-		.fa-bars {
-			font-size: 24px;
+		.btnCall {
 			position: absolute;
-			bottom: 20px;
-			right: 40px;
-			color: #fff;
+			right: 30px;
+			top: 50%;
+			transform: translateY(-50%);
 			display: none;
+			width: 30px;
+			height: 30px;
 			cursor: pointer;
+			&::before {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 2px;
+				background: #000;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: top 0.5s 0s, transform 0.5s 0.5s;
+			}
+			&::after {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 2px;
+				background: #000;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				transition: bottom 0.5s 0s, transform 0.5s 0.5s;
+			}
+			span {
+				display: block;
+				width: 100%;
+				height: 2px;
+				background: #000;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				margin-top: -1px;
+				transition: 1s;
+				text-indent: -9999px;
+			}
+			&.on {
+				&::before {
+					top: 50%;
+					margin-top: -1px;
+					transform: rotate(45deg);
+				}
+				&::after {
+					bottom: 50%;
+					margin-bottom: -1px;
+					transform: rotate(-45deg);
+				}
+				span {
+					transform: translateX(100%);
+					opacity: 0;
+				}
+			}
 		}
-		// .btnCall {
-		// 	position: absolute;
-		// 	right: 30px;
-		// 	top: 50%;
-		// 	transform: translateY(-50%);
-		// 	display: none;
-		// 	width: 30px;
-		// 	height: 30px;
-		// 	&::before {
-		// 		content: '';
-		// 		display: block;
-		// 		width: 100%;
-		// 		height: 2px;
-		// 		background: #000;
-		// 		position: absolute;
-		// 		top: 0;
-		// 		left: 0;
-		// 		transition: top 0.5s 0s, transform 0.5s 0.5s;
-		// 	}
-		// 	&::after {
-		// 		content: '';
-		// 		display: block;
-		// 		width: 100%;
-		// 		height: 2px;
-		// 		background: #000;
-		// 		position: absolute;
-		// 		bottom: 0;
-		// 		left: 0;
-		// 		transition: bottom 0.5s 0s, transform 0.5s 0.5s;
-		// 	}
-		// 	span {
-		// 		display: block;
-		// 		width: 100%;
-		// 		height: 2px;
-		// 		background: #000;
-		// 		position: absolute;
-		// 		top: 50%;
-		// 		left: 0;
-		// 		margin-top: -1px;
-		// 		transition: 1s;
-		// 		text-indent: -9999px;
-		// 	}
-		// 	&.on {
-		// 		&::before {
-		// 			top: 50%;
-		// 			margin-top: -1px;
-		// 			transform: rotate(45deg);
-		// 		}
-		// 		&::after {
-		// 			bottom: 50%;
-		// 			margin-bottom: -1px;
-		// 			transform: rotate(-45deg);
-		// 		}
-		// 		span {
-		// 			transform: translateX(100%);
-		// 			opacity: 0;
-		// 		}
-		// 	}
-		// }
 	}
 
 	&.main {
@@ -154,7 +146,7 @@ header {
 			#gnb {
 				display: none;
 			}
-			.fa-bars {
+			.btnCall {
 				display: block;
 			}
 		}

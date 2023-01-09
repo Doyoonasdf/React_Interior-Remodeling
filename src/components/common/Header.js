@@ -1,9 +1,16 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import { useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 function Header(props) {
 	const active = { color: '#ffb500' };
+
+	const [IsOn, setIsOn] = useState('');
+	const btnCallClick = (e) => {
+		e.preventDefault();
+		IsOn == '' ? setIsOn('on') : setIsOn('');
+	};
 	return (
 		<>
 			<header className={props.type}>
@@ -13,6 +20,7 @@ function Header(props) {
 							MMA
 						</NavLink>
 					</h1>
+
 					<ul id='gnb'>
 						<li>
 							<NavLink to='/department' activeStyle={active}>
@@ -45,8 +53,17 @@ function Header(props) {
 							</NavLink>
 						</li>
 					</ul>
-					{/* <span className='btnCall' onClick={() => props.menuOpen.current.toggle()}></span> */}
-					<FontAwesomeIcon icon={faBars} onClick={() => props.menuOpen.current.toggle()} />
+
+					<Link
+						to='#'
+						className={`btnCall ${IsOn}`}
+						onClick={(e) => {
+							btnCallClick(e);
+							props.menuOpen.current.toggle();
+						}}
+					>
+						<span>메뉴호출</span>
+					</Link>
 				</div>
 			</header>
 		</>
