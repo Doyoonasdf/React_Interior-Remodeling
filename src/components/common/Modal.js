@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const Modal = forwardRef((props, el) => {
 	const [Open, setOpen] = useState(false);
+
 	useImperativeHandle(el, () => {
 		return { open: () => setOpen(true) };
 	});
