@@ -19,14 +19,15 @@ const youtubeSlice = createSlice({
 	},
 	extraReducers: {
 		[fetchYoutube.pending]: (state) => {
-			state.isLoading = true;
+			//state.isLoading = true;
+			//state.data = [];
 		},
 		[fetchYoutube.fulfilled]: (state, action) => {
-			state.isLoading = false;
+			//state.isLoading = false;
 			state.data = action.payload;
 		},
 		[fetchYoutube.rejected]: (state, action) => {
-			state.isLoading = false;
+			//state.isLoading = false;
 			state.data = action.payload;
 		},
 	},

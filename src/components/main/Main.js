@@ -9,13 +9,13 @@ import Vids from './Vids';
 import Scroll from './Scroll';
 import { useState, useEffect } from 'react';
 
-function Main() {
+function Main({ menuOpen }) {
 	const [Scrolled, setScrolled] = useState(0);
 	const [Pos, setPos] = useState([]);
 
 	return (
 		<main>
-			<Header type={'main'} />
+			<Header type={'main'} menuOpen={menuOpen} />
 			<Visual />
 			<Information Scrolled={Scrolled} currentPos={Pos[0]} />
 			<Services />

@@ -16,6 +16,7 @@ function Gallery() {
 	const modal = useRef(null);
 
 	const [Loading, setLoading] = useState(true);
+	const [Init, setInit] = useState(true);
 	const [Index, setIndex] = useState(0);
 	const Items = useSelector((store) => store.flickr.data);
 	const showSample = () => {
@@ -36,13 +37,22 @@ function Gallery() {
 		frame.current.classList.remove('on');
 		setLoading(true);
 	};
+	useEffect(() => {
+		setInit(false);
+	}, []);
 
 	useEffect(() => {
+		if (Items.length === 0 && !Init) {
+			dispatch(fetchFlickr({ type: 'user', user: myId }));
+			frame.current.classList.remove('on');
+			setLoading(true);
+			return alert('검색어의 결과 이미지가 없습니다.');
+		}
 		setTimeout(() => {
 			frame.current.classList.add('on');
 			setLoading(false);
 		}, 500);
-	}, [Items]);
+	}, [Items, dispatch]);
 
 	return (
 		<>

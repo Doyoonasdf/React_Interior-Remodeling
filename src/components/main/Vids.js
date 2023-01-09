@@ -10,7 +10,7 @@ function Vids() {
 	return (
 		<>
 			<section id='vids' className='myScroll'>
-				<h1>Youtube</h1>
+				{/* <h1>Youtube</h1> */}
 				{Items.map((data, idx) => {
 					if (idx >= 2) return null;
 					const tit = data.snippet.title;

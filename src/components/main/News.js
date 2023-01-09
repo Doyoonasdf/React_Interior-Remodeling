@@ -1,8 +1,6 @@
 import { useRef, useEffect } from 'react';
 
 function News({ Scrolled, currentPos }) {
-	//메인페이지에 출력되는 해당컴포넌트에서 초기 더미데이터를 로컬스토리지에 저장
-
 	console.log('Scrolled', Scrolled);
 	console.log('posArr', currentPos);
 
@@ -70,7 +68,6 @@ function News({ Scrolled, currentPos }) {
 			<div className='wrap'>
 				{data.current.map((data, idx) => {
 					if (idx >= 3) return null;
-
 					return (
 						<article key={idx}>
 							<h5>{data.title}</h5>
