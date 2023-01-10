@@ -3,6 +3,9 @@ import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
 function Join() {
+	const terms =
+		'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore distinctio velit a	id aperiam modi quae, dolores error deleniti quis nesciunt nam, quisquam dicta nostrumodio. Exercitationem debitis quis libero!Lorem ipsum dolor sit amet consectetur	adipisicing elit. Inventore distinctio velit a id aperiam modi quae, dolores error deleniti quis nesciunt nam, quisquam dicta nostrum odio. Exercitationem debitis quis	liberoLorem ipsum dolor sit amet consectetur adipisicing elit. Inventore distinctio	velit a id aperiam modi quae, dolores error deleniti quis nesciunt nam, quisquam dicta nostrum odio. Exercitationem debitis quis libero!Lorem ipsum dolor sit amet	consectetur adipisicing elit. Inventore distinctio velit a id aperiam modi quae,	dolores error deleniti quis nesciunt nam, quisquam dicta nostrum odio. Exercitationem	debitis quis libero! Lorem ipsum dolor sit amet consectetur adipisicing elit.	Inventore distinctio velit a id aperiam modi quae, dolores error deleniti quis	nesciunt nam, quisquam dicta nostrum odio. Exercitationem debitis quis libero!Lorem	ipsum dolor sit amet consectetur adipisicing elit. Inventore distinctio velit a id	aperiam modi quae, dolores error deleniti quis nesciunt nam, quisquam dictt a id aperiam modi quae, dolores error deleniti quis nesciunt nam, quisquam dicta nostrum odio. Exercitationem debitis quis libero!Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore distinctio velit a id aperiam modi quae, dolores error	deleniti quis nesciunt nam, quisquam dicta nostrum odio. Exercitationem debitis quis	libero! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore distinctio	velit a id aperiam modi quae, dolores error deleniti quis nesciunt nam, quisquam dicta	nostrum odio. Exercitationem debitis quis libero!Lorem ipsum dolor sit amet	consectetur adipisicing elit. Inventore distinctio velit a id aperiam modi	quae,dolores error deleniti quis nesciunt nam, quisquam dicta nostrum odio.	Exercitationem debitis quis libero! Lorem ipsum dolor sit amet consectetur adipisicing	elit.Inventore distinctio velit a id aperiam modi quae, dolores error deleniti quis	nesciunt nam, quisquam dicta nostrum odio. Exercitationem debitis quis libero!';
+
 	const history = useHistory();
 	const initVal = {
 		userid: '',
@@ -143,39 +146,9 @@ function Join() {
 						<h2>
 							<label htmlFor='terms'>MEMBER AGREEMENT</label>
 						</h2>
-						<textarea name='terms' id='terms' cols='30' rows='10'>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore distinctio velit a
-							id aperiam modi quae, dolores error deleniti quis nesciunt nam, quisquam dicta nostrum
-							odio. Exercitationem debitis quis libero!Lorem ipsum dolor sit amet consectetur
-							adipisicing elit. Inventore distinctio velit a id aperiam modi quae, dolores error
-							deleniti quis nesciunt nam, quisquam dicta nostrum odio. Exercitationem debitis quis
-							liberoLorem ipsum dolor sit amet consectetur adipisicing elit. Inventore distinctio
-							velit a id aperiam modi quae, dolores error deleniti quis nesciunt nam, quisquam dicta
-							nostrum odio. Exercitationem debitis quis libero!Lorem ipsum dolor sit amet
-							consectetur adipisicing elit. Inventore distinctio velit a id aperiam modi quae,
-							dolores error deleniti quis nesciunt nam, quisquam dicta nostrum odio. Exercitationem
-							debitis quis libero! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Inventore distinctio velit a id aperiam modi quae, dolores error deleniti quis
-							nesciunt nam, quisquam dicta nostrum odio. Exercitationem debitis quis libero!Lorem
-							ipsum dolor sit amet consectetur adipisicing elit. Inventore distinctio velit a id
-							aperiam modi quae, dolores error deleniti quis nesciunt nam, quisquam dictt a id
-							aperiam modi quae, dolores error deleniti quis nesciunt nam, quisquam dicta nostrum
-							odio. Exercitationem debitis quis libero!Lorem ipsum dolor sit amet consectetur
-							adipisicing elit. Inventore distinctio velit a id aperiam modi quae, dolores error
-							deleniti quis nesciunt nam, quisquam dicta nostrum odio. Exercitationem debitis quis
-							libero! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore distinctio
-							velit a id aperiam modi quae, dolores error deleniti quis nesciunt nam, quisquam dicta
-							nostrum odio. Exercitationem debitis quis libero!Lorem ipsum dolor sit amet
-							consectetur adipisicing elit. Inventore distinctio velit a id aperiam modi
-							quae,dolores error deleniti quis nesciunt nam, quisquam dicta nostrum odio.
-							Exercitationem debitis quis libero! Lorem ipsum dolor sit amet consectetur adipisicing
-							elit.Inventore distinctio velit a id aperiam modi quae, dolores error deleniti quis
-							nesciunt nam, quisquam dicta nostrum odio. Exercitationem debitis quis libero!
-						</textarea>
+						<textarea name='terms' id='terms' cols='30' rows='10' value={terms} readOnly />
 						{/*  agreement    */}
 						<div className='agreement'>
-							{/* <input type='checkbox' name='agree' id='agree' onChange={handleCheck} />
-							 */}
 							<input type='checkbox' name='agree' id='agree' onChange={handleAgree} />
 
 							<label htmlFor='agree'>약관에 동의합니다</label>

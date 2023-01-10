@@ -2,6 +2,12 @@ import { useRef, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Layout from '../common/Layout';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faCar } from '@fortawesome/free-solid-svg-icons';
+
 function Location() {
 	//인증함수
 	const history = useHistory();
@@ -88,27 +94,17 @@ function Location() {
 	const markerOptions = [
 		{
 			title: '서울본점',
-			address: 'lorem address lorem address lorem address',
-			latlng: new kakao.maps.LatLng(37.5308096, 126.8983384),
+			latlng: new kakao.maps.LatLng(37.5278751, 127.0418071),
 			imgSrc: `${process.env.PUBLIC_URL}/img/location_logo1.png`,
 			imgSize: new kakao.maps.Size(64, 64),
 			imgPos: { offset: new kakao.maps.Point(32, 64) },
 		},
 		{
-			title: '동탄지점',
-			address: 'lorem address lorem address lorem address',
-			latlng: new kakao.maps.LatLng(37.2099594, 127.097195),
+			title: '천안지점',
+			latlng: new kakao.maps.LatLng(36.8004193, 127.1048722),
 			imgSrc: `${process.env.PUBLIC_URL}/img/location_logo1.png`,
 			imgSize: new kakao.maps.Size(64, 64),
 			imgPos: { offset: new kakao.maps.Point(32, 64) },
-		},
-		{
-			title: '안양지점',
-			address: 'lorem address lorem address lorem address',
-			latlng: new kakao.maps.LatLng(37.3744782, 126.9486063),
-			imgSrc: `${process.env.PUBLIC_URL}/img/location_logo1.png`,
-			imgSize: new kakao.maps.Size(64, 64),
-			imgPos: { offset: new kakao.maps.Point(32, 40) },
 		},
 	];
 
@@ -159,11 +155,12 @@ function Location() {
 		Traffic
 			? Location.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC)
 			: Location.removeOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
-	}, [Traffic]);
+	}, [Traffic, kakao]);
 
 	return (
 		<Layout name={'location'} h1name={'CONTACT US'} subtit={'찾아오시는길'}>
 			<div className='upper'>
+				<div id='map' ref={mapContainer}></div>
 				<div className='QuickJoin'>
 					<h2>GET IN TOUCH</h2>
 					<form action='' onSubmit={handleSubmit}>
@@ -248,6 +245,9 @@ function Location() {
 						</fieldset>
 					</form>
 				</div>
+			</div>
+
+			<nav>
 				<ul className='branch'>
 					{MarkerOptions.map((el, idx) => {
 						let isOn = '';
@@ -266,19 +266,38 @@ function Location() {
 							</li>
 						);
 					})}
+					<button onClick={() => setTraffic(!Traffic)}>
+						{/* {!Traffic ? 'Traffic ON' : 'Traffic OFF'} */}
+						<FontAwesomeIcon icon={faCar} className='car' />
+					</button>
 				</ul>
+			</nav>
+
+			<div className='contbox'>
+				<article>
+					<FontAwesomeIcon icon={faLocationDot} className='loct' />
+					<h3>OPEN EVERY DAY</h3>
+					<p>
+						Monday-Friday : 6am - 5pm
+						<br />
+						Weekend : 9am - 2pm
+					</p>
+				</article>
+				<article>
+					<FontAwesomeIcon icon={faPhone} className='phone' />
+					<h3>CALL US</h3>
+					<p>
+						서울본점 02-258-4892
+						<br />
+						천안지점 041-321-5582
+					</p>
+				</article>
+				<article>
+					<FontAwesomeIcon icon={faEnvelope} className='env' />
+					<h3>EMAIL US</h3>
+					<p>MMAart@naver.com</p>
+				</article>
 			</div>
-
-			<div id='map' ref={mapContainer}></div>
-
-			<ul className='traffic'>
-				<li onClick={() => Location.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC)}>
-					<Link to='#'>교통정보 보기</Link>
-				</li>
-				<li onClick={() => Location.removeOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC)}>
-					<Link to='#'>교통정보 끄기</Link>
-				</li>
-			</ul>
 		</Layout>
 	);
 }
