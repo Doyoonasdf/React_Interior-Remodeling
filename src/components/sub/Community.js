@@ -80,6 +80,7 @@ function Community() {
 
 	useEffect(() => {
 		localStorage.setItem('post', JSON.stringify(Posts));
+		window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 	}, [Posts]);
 
 	return (
