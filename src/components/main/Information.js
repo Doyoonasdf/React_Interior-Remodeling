@@ -12,6 +12,8 @@ function Information({ Scrolled, currentPos }) {
 	scroll < 0 && (scroll = 0);
 	const [Slides, setSlides] = useState([]);
 	const slider = useRef('');
+	//SldEnableClick 재이벤트방지구문
+	// let SldEnableClick = true;
 
 	const init = () => {
 		const panel = slider.current.querySelector('ul');

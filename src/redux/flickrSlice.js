@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const fetchFlickr = createAsyncThunk('flickr/requestFlickr', async (opt) => {
 	const baseURL = 'https://www.flickr.com/services/rest/?format=json&nojsoncallback=1';
-	const key = 'e95ee7e806026c7c04df570c669b6630';
+	const key = '41968bb5751272456795594b64f64fb7';
 	const method_sample = 'flickr.favorites.getList';
 	const method_search = 'flickr.photos.search';
 	const method_user = 'flickr.people.getPhotos';

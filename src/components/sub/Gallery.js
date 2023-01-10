@@ -1,6 +1,7 @@
 import Layout from '../common/Layout';
 import { useEffect, useState, useRef } from 'react';
-
+//  키  41968bb5751272456795594b64f64fb7
+// 아이디 197355893@N03/
 import Masonry from 'react-masonry-component';
 
 import Modal from '../common/Modal';
@@ -9,7 +10,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 function Gallery() {
 	const dispatch = useDispatch();
-	const myId = '197146982@N03';
+	const myId = '197355893@N03';
 	const masonryOptions = { transitionDuration: '0.5s' };
 	const frame = useRef(null);
 	const input = useRef(null);
