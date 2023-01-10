@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import Modal from '../common/Modal';
 import { Link } from 'react-router-dom';
 
+//새 재생목록playlist?list=PLSR_N0olb_L4y0L9t-ujNnuoJPO2R9G28
 function Youtube() {
 	const modal = useRef(null);
 	const [Index, setIndex] = useState(0);
@@ -11,7 +12,7 @@ function Youtube() {
 	const vidList = useSelector((store) => store.youtube.data);
 	return (
 		<>
-			<Layout name={'youtube'} h1name={'PORTFOLIO'} subtit={'리모델링 시공사례'}>
+			<Layout name={'youtube'} h1name={'YOUTUBE'}>
 				{vidList.map((data, idx) => {
 					const tit = data.snippet.title;
 					const con = data.snippet.description;
