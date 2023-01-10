@@ -91,43 +91,45 @@ function Gallery() {
 					<Masonry elementType={'div'} options={masonryOptions}>
 						{Items.map((item, idx) => {
 							return (
-								<article key={idx}>
-									<div className='picBox'>
-										<div
-											className='pic'
-											onClick={() => {
-												setIndex(idx);
-												modal.current.open();
-											}}
-										>
-											<img
-												src={`https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`}
-												alt={item.title}
-											/>
-										</div>
-
-										<div className='conBox'>
-											<h2>{item.title}</h2>
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, nostrum!
-											</p>
-											<div className='profile'>
+								<div className='inner'>
+									<article key={idx}>
+										<div className='picBox'>
+											<div
+												className='pic'
+												onClick={() => {
+													setIndex(idx);
+													modal.current.open();
+												}}
+											>
 												<img
-													src={`http://farm${item.farm}.staticflickr.com/${item.server}/buddyicons/${item.owner}.jpg`}
-													alt={item.owner}
-													onError={(e) =>
-														e.target.setAttribute(
-															'src',
-															'https://www.flickr.com/images/buddyicon.gif'
-														)
-													}
+													src={`https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`}
+													alt={item.title}
 												/>
-												{/* <span onClick={showUser}>{item.owner}</span> */}
-												<span>{item.owner}</span>
+											</div>
+
+											<div className='conBox'>
+												<h2>{item.title}</h2>
+												<p>
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, nostrum!
+												</p>
+												<div className='profile'>
+													<img
+														src={`http://farm${item.farm}.staticflickr.com/${item.server}/buddyicons/${item.owner}.jpg`}
+														alt={item.owner}
+														onError={(e) =>
+															e.target.setAttribute(
+																'src',
+																'https://www.flickr.com/images/buddyicon.gif'
+															)
+														}
+													/>
+													{/* <span onClick={showUser}>{item.owner}</span> */}
+													<span>{item.owner}</span>
+												</div>
 											</div>
 										</div>
-									</div>
-								</article>
+									</article>
+								</div>
 							);
 						})}
 					</Masonry>
