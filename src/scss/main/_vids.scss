@@ -1,8 +1,108 @@
 #vids {
 	width: 100%;
 	height: 100vh;
-	background: lightblue;
 	position: relative;
-	padding: 10vw;
+	padding: 150px 0px 150px;
+	background-color: #fffcf0;
 	overflow: hidden;
+	.inner {
+		width: 1180px;
+		height: 100%;
+		margin: 0 auto;
+		position: relative;
+		padding: 10px;
+		h2 {
+			text-align: center;
+			font-weight: bold;
+			font-size: 50px;
+			color: #222;
+			margin-bottom: 50px;
+		}
+		.wrap {
+			width: 100%;
+			height: 100%;
+			&::after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+			article {
+				float: left;
+				height: 100%;
+				width: 100%;
+				transform: translateY(100px);
+				transition: 0.3s;
+				position: relative;
+				cursor: pointer;
+				padding: 10px;
+				&:nth-of-type(1) {
+					width: calc(100% / 2);
+					height: calc(100% / 2);
+					transition-delay: 0s;
+				}
+				&:nth-of-type(2) {
+					width: calc(100% / 2);
+					height: calc(100% / 2);
+					transition-delay: 0.3s;
+				}
+				&:nth-of-type(3) {
+					width: calc(100% / 3);
+					height: calc(100% / 3);
+					transition-delay: 0.6s;
+				}
+				&:nth-of-type(4) {
+					width: calc(100% / 3);
+					height: calc(100% / 3);
+					transition-delay: 0.9s;
+				}
+				&:nth-of-type(5) {
+					width: calc(100% / 3);
+					height: calc(100% / 3);
+					transition-delay: 1.2s;
+				}
+				.pic {
+					height: 100%;
+					width: 100%;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						filter: grayscale(0.9);
+						&:hover {
+							filter: saturate(1.1);
+						}
+					}
+				}
+				&.on {
+					transform: translateY(0px);
+				}
+				.con {
+					width: 100%;
+					height: 100%;
+					button {
+						width: 50px;
+						height: 50px;
+						cursor: pointer;
+						border: #efefef;
+						background-color: red;
+						color: #efefef;
+						display: block;
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%, -25%);
+						opacity: 1;
+						border-radius: 50%;
+						.play {
+							font-size: 1vw;
+						}
+						&:hover {
+							opacity: 0;
+						}
+					}
+				}
+			}
+		}
+	}
 }

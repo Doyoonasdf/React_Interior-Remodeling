@@ -21,17 +21,6 @@ function Services() {
 		console.log(Mainservice);
 	}, [Mainservice]);
 
-	// const active = {
-	// 	color: 'rgba(235, 213, 69, 0.989) ',
-	// 	scale: '1.2',
-	// };
-
-	// const on = {
-	// 	display: 'flex',
-	// 	opacity: '1',
-	// 	visibility: 'visible',
-	// };
-
 	return (
 		<section id='services' className='scroll_view'>
 			<div className='innerH1'>

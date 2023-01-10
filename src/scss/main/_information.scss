@@ -58,20 +58,19 @@
 							}
 						}
 						.txt {
-							padding: 0px 50px;
+							padding: 60px 50px;
 							width: 50%;
 							overflow: hidden;
 							position: relative;
 							height: 500px;
 							h2 {
-								color: #ffb500;
-								font-size: 50px;
+								color: rgba(235, 213, 69, 0.989);
+								font-size: 35px;
 								margin-bottom: 20px;
 							}
 							p {
 								color: #222;
 								font-size: 20px;
-								margin-bottom: 50px;
 							}
 							span {
 								font-size: 18px;
@@ -79,16 +78,25 @@
 								font-weight: bold;
 							}
 							button {
-								padding: 15px 20px;
-								border: 1px solid #222;
-								background-color: #fff;
-								box-shadow: 4px 4px 5px 0px #222;
+								display: block;
+								width: 20%;
 								position: absolute;
-								bottom: 20px;
 								right: 0;
-								color: #222;
-								font-size: 16px;
+								bottom: 0;
+								text-align: center;
+								margin: 20px;
+								border: 1px solid #222;
+								padding: 10px;
+								color: black;
+								background-color: #fffcf0;
+								font-weight: bold;
+								font-size: 15px;
 								transition: 0.5s;
+								cursor: pointer;
+								&:hover {
+									background-color: #000;
+									color: #efefef;
+								}
 							}
 						}
 					}
@@ -97,13 +105,21 @@
 
 			.prev {
 				position: absolute;
-				left: 20px;
+				left: 0px;
 				top: 50%;
+				font-size: 40px;
+				background-color: #fffcf0;
+				border: none;
+				cursor: pointer;
 			}
 			.next {
 				position: absolute;
-				right: 20px;
+				right: 0px;
 				top: 50%;
+				font-size: 40px;
+				background-color: #fffcf0;
+				border: none;
+				cursor: pointer;
 			}
 		}
 

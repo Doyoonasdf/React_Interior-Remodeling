@@ -1,7 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useRef, useEffect, useState } from 'react';
-import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+
 import { Link } from 'react-router-dom';
 import Anim from '../../asset/anime';
 
@@ -9,8 +7,6 @@ function News({ Scrolled, currentPos }) {
 	console.log('Scrolled', Scrolled);
 	console.log('posArr', currentPos);
 
-	const [Slides, setSlides] = useState([]);
-	const slider = useRef('');
 	const getLocalData = () => {
 		const dummyPosts = [
 			{
@@ -57,52 +53,9 @@ function News({ Scrolled, currentPos }) {
 	let scroll = Scrolled - base - currentPos || 0;
 	scroll < 0 && (scroll = 0);
 
-	const init = () => {
-		const panel = slider.current.querySelector('.panel');
-		const articles = panel.querySelectorAll('article');
-		const len = articles.length;
-
-		panel.style.width = 100 * len + '%';
-		articles.forEach((el) => (el.style.width = 100 / len + '%'));
-		panel.lastElementChild !== null && panel.prepend(panel.lastElementChild);
-	};
-
-	const nextSlide = (e) => {
-		const panel = slider.current.children[0];
-		console.log(panel);
-
-		new Anim(panel, {
-			prop: 'margin-left',
-			value: '-200%',
-			duration: 500,
-			callback: () => {
-				panel.append(panel.firstElementChild);
-				panel.style.marginLeft = '-100%';
-			},
-		});
-	};
-
-	const prevSlide = (e) => {
-		const panel = slider.current.children[0];
-
-		new Anim(panel, {
-			prop: 'margin-left',
-			value: '0%',
-			duration: 500,
-			callback: () => {
-				panel.prepend(panel.lastElementChild);
-				panel.style.marginLeft = '-100%';
-			},
-		});
-	};
-
 	useEffect(() => {
 		localStorage.setItem('post', JSON.stringify(data.current));
 	}, []);
-
-	useEffect(() => {
-		init();
-	}, [Slides]);
 
 	return (
 		<section id='news' className='scroll_view'>
@@ -118,33 +71,18 @@ function News({ Scrolled, currentPos }) {
 					Question and Answer
 				</h2>
 				<div className='QA'>
-					<div className='txt'>
-						<h3>Q&A</h3>
-						<p>궁금한 사항에 대해 작성해주세요</p>
-						<Link to='/community'>VIEW MORE</Link>
+					<div className='wrap'>
+						{data.current.map((data, idx) => {
+							if (idx >= 3) return null;
 
-						<ul className='btns'>
-							<li className='prev' onClick={(e) => prevSlide}>
-								<FontAwesomeIcon icon={faAngleLeft} />
-							</li>
-							<li className='next' onClick={(e) => nextSlide}>
-								<FontAwesomeIcon icon={faAngleRight} />
-							</li>
-						</ul>
-					</div>
-
-					<div className='slider' ref={slider}>
-						<div className='panel'>
-							{data.current.map((data, idx) => {
-								if (idx >= 6) return null;
-								return (
-									<article key={idx}>
-										<h5>{data.title}</h5>
-										<p>{data.content}</p>
-									</article>
-								);
-							})}
-						</div>
+							return (
+								<article key={idx}>
+									<h5>{data.title}</h5>
+									<p>{data.content}</p>
+									<Link to='/community'>VIEW MORE</Link>
+								</article>
+							);
+						})}
 					</div>
 				</div>
 			</div>

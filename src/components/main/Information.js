@@ -3,6 +3,9 @@ import { useState, useEffect, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import Anim from '../../asset/anime';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 function Information({ Scrolled, currentPos }) {
 	let scroll = Scrolled - currentPos || 0;
@@ -61,7 +64,7 @@ function Information({ Scrolled, currentPos }) {
 	return (
 		<section id='information' className='scroll_view'>
 			<div className='inner'>
-				<h2>Special Exhibition</h2>
+				<h2>SPECIAL EXHIBITION</h2>
 				<div id='slider' ref={slider}>
 					<ul className='panel'>
 						{Slides.map((slide, idx) => {
@@ -87,10 +90,10 @@ function Information({ Scrolled, currentPos }) {
 					</ul>
 
 					<button className='prev' onClick={prevSlide}>
-						prev
+						<FontAwesomeIcon icon={faAngleLeft} />
 					</button>
 					<button className='next' onClick={nextSlide}>
-						next
+						<FontAwesomeIcon icon={faAngleRight} />
 					</button>
 				</div>
 			</div>

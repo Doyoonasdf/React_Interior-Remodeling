@@ -1,6 +1,9 @@
 import { useSelector } from 'react-redux';
 import { useState, useRef } from 'react';
 import Modal from '../common/Modal';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
+
 function Vids() {
 	const modal = useRef(null);
 	const [index, setIndex] = useState(0);
@@ -9,32 +12,37 @@ function Vids() {
 
 	return (
 		<>
-			<section id='vids' className='myScroll'>
-				{/* <h1>Youtube</h1> */}
-				{Items.map((data, idx) => {
-					if (idx >= 2) return null;
-					const tit = data.snippet.title;
-					const con = data.snippet.description;
-					return (
-						<article key={tit}>
-							<h2>{tit.length > 20 ? tit.substr(0, 20) + '...' : tit}</h2>
-							<div
-								className='pic'
-								onClick={() => {
-									setIndex(idx);
-									modal.current.open();
-								}}
-							>
-								<img
-									key={idx}
-									src={data.snippet.thumbnails.standard.url}
-									alt={data.snippet.title}
-								/>
-							</div>
-							<p>{con.length > 100 ? con.substr(0, 100) + '...' : con}</p>
-						</article>
-					);
-				})}
+			<section id='vids' className='scroll_view'>
+				<div className='inner'>
+					<h2>YOUTUBE</h2>
+					<div className='wrap'>
+						{Items.map((data, idx) => {
+							if (idx >= 5) return null;
+							return (
+								<article key={idx}>
+									<div
+										className='pic'
+										onClick={() => {
+											setIndex(idx);
+											modal.current.open();
+										}}
+									>
+										<img
+											key={idx}
+											src={data.snippet.thumbnails.standard.url}
+											alt={data.snippet.title}
+										/>
+									</div>
+									<div className='con'>
+										<button className='play'>
+											<FontAwesomeIcon icon={faPlay} className='play' />
+										</button>
+									</div>
+								</article>
+							);
+						})}
+					</div>
+				</div>
 			</section>
 
 			<Modal ref={modal}>

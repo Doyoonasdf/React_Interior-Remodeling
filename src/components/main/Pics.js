@@ -10,25 +10,29 @@ function Pics() {
 	return (
 		<>
 			<section id='pics' className='scroll_view'>
-				<h1>Flickr</h1>
-				{Items.map((pic, idx) => {
-					if (idx >= 5) return null;
-					return (
-						<div
-							className='pic'
-							onClick={() => {
-								setIndex(idx);
-								modal.current.open();
-							}}
-						>
-							<img
-								key={idx}
-								src={`https://live.staticflickr.com/${pic.server}/${pic.id}_${pic.secret}_m.jpg`}
-								alt={pic.title}
-							/>
-						</div>
-					);
-				})}
+				<div className='inner'>
+					<h2>GALLERY</h2>
+					<div className='wrap'>
+						{Items.map((pic, idx) => {
+							if (idx >= 5) return null;
+							return (
+								<div
+									className='pic'
+									onClick={() => {
+										setIndex(idx);
+										modal.current.open();
+									}}
+								>
+									<img
+										key={idx}
+										src={`https://live.staticflickr.com/${pic.server}/${pic.id}_${pic.secret}_m.jpg`}
+										alt={pic.title}
+									/>
+								</div>
+							);
+						})}
+					</div>
+				</div>
 			</section>
 
 			<Modal ref={modal}>
