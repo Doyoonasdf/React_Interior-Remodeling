@@ -18,9 +18,9 @@ function Department(end, start = 0, duration = 1000) {
 	}, [end, start, duration]);
 
 	return (
-		<Layout name={'department'} h1name={'ABOUT US'} subtit={'미술관 소개'}>
+		<Layout name={'department'} h1name={'ABOUT US'}>
 			<div className='introduce'>
-				<h2>Introduce</h2>
+				<h2>INTRODUCE</h2>
 				<ul className='list'>
 					<li>
 						<div>
@@ -58,22 +58,25 @@ function Department(end, start = 0, duration = 1000) {
 			<div className='owner'>
 				<h2>The owner of MMA</h2>
 				<article>
-					<div className='txt'>
-						<h3>Lorem ipsum dolor sit amet.</h3>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odio dicta iste facilis
-							possimus hic eligendi. Amet quis itaque temporibus. Numquam explicabo minus quae,
-							consequuntur consectetur cumque voluptates beatae iste sed et voluptatibus tenetur
-							dignissimos! Molestias nobis commodi soluta! Provident labore delectus, doloremque
-							facilis blanditiis fugit ad accusamus sequi sint quos aspernatur obcaecati quidem ut
-							saepe, iure veniam distinctio magni! Earum ipsam asperiores quibusdam ad consequuntur
-							et fugit commodi fuga officia dolorum, dolorem dolore, recusandae nihil debitis,
-							itaque nesciunt alias quos? Dolor, omnis optio! Facere culpa labore dolorum voluptas
-							tenetur, sequi tempora commodi totam fugiat numquam voluptates quam, suscipit minus.
-						</p>
-					</div>
 					<div className='pic'>
 						<img src='' alt='' />
+					</div>
+					<div className='box'>
+						<div className='txt'>
+							<h3>Lorem ipsum dolor sit amet.</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odio dicta iste
+								facilis possimus hic eligendi. Amet quis itaque temporibus. Numquam explicabo minus
+								quae, consequuntur consectetur cumque voluptates beatae iste sed et voluptatibus
+								tenetur dignissimos! Molestias nobis commodi soluta! Provident labore delectus,
+								doloremque facilis blanditiis fugit ad accusamus sequi sint quos aspernatur
+								obcaecati quidem ut saepe, iure veniam distinctio magni! Earum ipsam asperiores
+								quibusdam ad consequuntur et fugit commodi fuga officia dolorum, dolorem dolore,
+								recusandae nihil debitis, itaque nesciunt alias quos? Dolor, omnis optio! Facere
+								culpa labore dolorum voluptas tenetur, sequi tempora commodi totam fugiat numquam
+								voluptates quam, suscipit minus.
+							</p>
+						</div>
 					</div>
 				</article>
 			</div>

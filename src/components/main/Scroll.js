@@ -1,112 +1,70 @@
-import { useRef, useEffect, useState } from 'react';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { useRef, useEffect, useCallback } from 'react';
 import Anim from '../../asset/anime';
 
 function Scroll({ setScrolled, setPos }) {
-	const posArr = useRef([]);
-	// const num = useRef(4);
-	const scroll_li = useRef(null);
-	const scrollSpeed = useRef(500);
-	const [Mainscroll, setMainscroll] = useState([]);
-	const [Index, setIndex] = useState(0);
+	const pos = useRef([]);
+	const num = useRef(6);
+	const speed = useRef(500);
+	const btnRef = useRef(null);
 
-	const getPos = () => {
-		posArr.current = [];
-		const boxs = scroll_li.current.parentElement.querySelectorAll('.scroll_view');
-		for (const box of boxs) posArr.current.push(box.offsetTop);
-		// console.log(posArr.current);
-		setPos(posArr.current);
-	};
+	const getPos = useCallback(() => {
+		pos.current = [];
+		const secs = btnRef.current.parentElement.querySelectorAll('.scroll_view');
+		for (const sec of secs) pos.current.push(sec.offsetTop);
+		setPos(pos.current);
+	}, [setPos]);
 
-	const scrollActivation = () => {
-		const btns = scroll_li.current.children;
-		const boxs = scroll_li.current.parentElement.querySelectorAll('.scroll_view');
+	const activation = useCallback(() => {
+		const btns = btnRef.current.children;
+		const secs = btnRef.current.parentElement.querySelectorAll('.scroll_view');
 		const scroll = window.scrollY;
 		const base = -window.innerHeight / 3;
 		setScrolled(scroll);
 
-		posArr.current.forEach((pos, idx) => {
+		pos.current.forEach((pos, idx) => {
 			if (scroll >= pos + base) {
 				for (const btn of btns) btn.classList.remove('on');
-				for (const box of boxs) box.classList.remove('on');
+				for (const sec of secs) sec.classList.remove('on');
 				btns[idx].classList.add('on');
-				boxs[idx].classList.add('on');
+				secs[idx].classList.add('on');
 			}
 		});
-	};
+	}, [setScrolled]);
 
 	useEffect(() => {
-		axios.get(`${process.env.PUBLIC_URL}/DB/mainscroll.json`).then((json) => {
-			setMainscroll(json.data.mainscroll);
-		});
-
-		new Anim(window, {
-			prop: 'scroll',
-			value: posArr.current[0],
-			duration: 0,
-		});
+		window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 
 		getPos();
 		window.addEventListener('resize', getPos);
-		window.addEventListener('scroll', scrollActivation);
+		window.addEventListener('scroll', activation);
+
 		return () => {
 			window.removeEventListener('resize', getPos);
-			window.removeEventListener('scroll', scrollActivation);
+			window.removeEventListener('scroll', activation);
 		};
-	}, []);
-
-	useEffect(() => {
-		// console.log(Mainscroll);
-	}, [Mainscroll]);
+	}, [getPos, activation]);
 
 	return (
-		<ul className='Scroll' ref={scroll_li}>
-			{Mainscroll.map((data, idx) => {
-				let isOn = '';
-				Index === idx && (isOn = 'on');
-				return (
-					<li
-						key={idx}
-						className={isOn}
-						onClick={() =>
-							new Anim(
-								window,
-								{
-									prop: 'scroll',
-									value: posArr.current[idx],
-									duration: scrollSpeed.current,
-								},
-								setIndex(idx)
-							)
-						}
-					>
-						<span>{data.name}</span>
-						<Link to='#'></Link>
-					</li>
-				);
-			})}
-			{/* {Array(num.current).fill().map((_, idx) => {
+		<ul className='Scroll' ref={btnRef}>
+			{Array(num.current)
+				.fill()
+				.map((_, idx) => {
 					let isOn = '';
 					idx === 0 && (isOn = 'on');
-					return <li key={idx} className={isOn}></li>;
-				})} */}
-
-			{/* <li className='on'>
-				<span>HOME</span>
-			</li>
-			<li>
-				<span>SERVICES</span>
-			</li>
-			<li>
-				<span>NEWS</span>
-			</li>
-			<li>
-				<span>PROJECTS</span>
-			</li>
-			<li>
-				<span></span>
-			</li> */}
+					return (
+						<li
+							key={idx}
+							className={isOn}
+							onClick={() => {
+								new Anim(window, {
+									prop: 'scroll',
+									value: pos.current[idx],
+									duration: speed.current,
+								});
+							}}
+						></li>
+					);
+				})}
 		</ul>
 	);
 }

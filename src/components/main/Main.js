@@ -18,9 +18,9 @@ function Main({ menuOpen }) {
 			<Header type={'main'} menuOpen={menuOpen} />
 			<Visual currentPos={Pos[0]} />
 			<Information Scrolled={Scrolled} currentPos={Pos[1]} />
-			<Pics currentPos={Pos[2]} />
-			<Vids currentPos={Pos[3]} />
-			<Services currentPos={Pos[4]} />
+			<Services currentPos={Pos[2]} />
+			<Pics currentPos={Pos[3]} />
+			<Vids currentPos={Pos[4]} />
 			<News Scrolled={Scrolled} currentPos={Pos[5]} />
 			<Scroll setScrolled={setScrolled} setPos={setPos} />
 		</main>

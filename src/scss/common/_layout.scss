@@ -2,9 +2,20 @@
 	figure {
 		width: 100%;
 		height: 300px;
-		background: #bbb;
+		background-color: #fffcf0;
 		opacity: 0;
 		transition: 1s;
+		position: relative;
+		h1 {
+			position: absolute;
+			bottom: 10%;
+			right: 10%;
+			width: 100%;
+			font-size: 70px;
+			max-width: 1280px;
+			z-index: 2;
+			text-align: left;
+		}
 	}
 	> .inner {
 		width: 1180px;
@@ -14,25 +25,6 @@
 		opacity: 0;
 		transform: translateY(100px);
 		transition: opacity 1s, transform 1s;
-		h1 {
-			font-weight: bold;
-			font-size: 50px;
-			color: #000;
-			margin-bottom: 70px;
-			span {
-				font-family: 'BlackHanSans';
-				font-weight: bold;
-				font-size: 20px;
-				line-height: 1px;
-				color: #aaa;
-				&::before {
-					content: '/';
-					font-weight: normal;
-					margin-right: 20px;
-					margin-left: 10px;
-				}
-			}
-		}
 	}
 
 	&.on {

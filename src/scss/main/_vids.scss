@@ -35,6 +35,9 @@
 				position: relative;
 				cursor: pointer;
 				padding: 10px;
+				overflow: hidden;
+				position: relative;
+				filter: grayscale(0.5);
 				&:nth-of-type(1) {
 					width: calc(100% / 2);
 					height: calc(100% / 2);
@@ -63,15 +66,11 @@
 				.pic {
 					height: 100%;
 					width: 100%;
-
 					img {
 						width: 100%;
 						height: 100%;
 						object-fit: cover;
-						filter: grayscale(0.9);
-						&:hover {
-							filter: saturate(1.1);
-						}
+						transition: 1s;
 					}
 				}
 				&.on {
@@ -94,12 +93,20 @@
 						transform: translate(-50%, -25%);
 						opacity: 1;
 						border-radius: 50%;
+						transition: 1s;
 						.play {
 							font-size: 1vw;
+							transition: 0.2s;
+							&:hover {
+								transform: scale(1.5);
+							}
 						}
-						&:hover {
-							opacity: 0;
-						}
+					}
+				}
+				&:hover {
+					filter: saturate(1.1);
+					img {
+						transform: scale(1.2);
 					}
 				}
 			}

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 function Header(props) {
-	const active = { color: '#ffb500' };
+	const active = { color: 'rgba(235, 213, 69, 0.989)' };
 
 	const [IsOn, setIsOn] = useState('');
 	const btnCallClick = (e) => {
@@ -23,34 +23,22 @@ function Header(props) {
 
 					<ul id='gnb'>
 						<li>
-							<NavLink to='/department' activeStyle={active}>
-								Department
-							</NavLink>
+							<NavLink to='/department'>Department</NavLink>
 						</li>
 						<li>
-							<NavLink to='/gallery' activeStyle={active}>
-								Gallery
-							</NavLink>
+							<NavLink to='/gallery'>Gallery</NavLink>
 						</li>
 						<li>
-							<NavLink to='/youtube' activeStyle={active}>
-								Youtube
-							</NavLink>
+							<NavLink to='/youtube'>Youtube</NavLink>
 						</li>
 						<li>
-							<NavLink to='/community' activeStyle={active}>
-								Community
-							</NavLink>
+							<NavLink to='/community'>Community</NavLink>
 						</li>
 						<li>
-							<NavLink to='/location' activeStyle={active}>
-								Location
-							</NavLink>
+							<NavLink to='/location'>Location</NavLink>
 						</li>
 						<li>
-							<NavLink to='/join' activeStyle={active}>
-								Membership
-							</NavLink>
+							<NavLink to='/join'>Membership</NavLink>
 						</li>
 					</ul>
 

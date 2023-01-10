@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Modal from '../common/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
@@ -7,9 +7,11 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons';
 function Vids() {
 	const modal = useRef(null);
 	const [index, setIndex] = useState(0);
-
 	const Items = useSelector((store) => store.youtube.data);
 
+	useEffect(() => {
+		window.scrollTo({ top: 0, left: 0, bahavior: 'smooth' });
+	}, [Items]);
 	return (
 		<>
 			<section id='vids' className='scroll_view'>
@@ -33,7 +35,13 @@ function Vids() {
 											alt={data.snippet.title}
 										/>
 									</div>
-									<div className='con'>
+									<div
+										className='con'
+										onClick={() => {
+											setIndex(idx);
+											modal.current.open();
+										}}
+									>
 										<button className='play'>
 											<FontAwesomeIcon icon={faPlay} className='play' />
 										</button>

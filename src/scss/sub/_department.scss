@@ -1,12 +1,14 @@
 .department {
+	background-color: #fffcf0;
 	.introduce {
 		width: 100%;
 		position: relative;
 		h2 {
 			font-weight: bold;
 			font-size: 30px;
-			color: #444;
+			color: #333;
 			margin-bottom: 30px;
+			text-align: center;
 		}
 		.list {
 			width: 100%;
@@ -60,38 +62,23 @@
 			margin-bottom: 30px;
 		}
 		article {
-			width: 100%;
-			height: 500px;
-			background-color: #fffcf0;
-			&::after {
-				content: '';
-				display: block;
-				clear: both;
-			}
-			.txt {
-				float: left;
-				width: 580px;
-				overflow: hidden;
-				padding: 50px 50px;
-
-				h3 {
-					margin-bottom: 20px;
-					font-size: 25px;
-				}
-				p {
-					font-size: 18px;
-				}
-			}
+			display: flex;
+			justify-content: flex-end;
+			overflow: hidden;
+			position: relative;
+			width: 80%;
 			.pic {
-				width: 580px;
-				height: 100%;
-				margin-right: 0;
-				float: right;
-				background-color: aliceblue;
+				box-shadow: 10px 10px 15px rgb(0 0 0 / 30%);
+				height: 70%;
+				left: 0;
+				position: absolute;
+				top: 15%;
+				width: 230px;
+				z-index: 2;
 				img {
-					width: 100%;
 					height: 100%;
 					object-fit: cover;
+					width: 100%;
 				}
 			}
 		}
