@@ -1,6 +1,11 @@
 import Layout from '../common/Layout';
 import { useRef, useState, useEffect } from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPen, faTrashCan, faX, faCheck } from '@fortawesome/free-solid-svg-icons';
+
+// <FontAwesomeIcon icon="fa-solid fa-pen" />
+// <FontAwesomeIcon icon="fa-solid fa-trash-can" />
 function Community() {
 	//메인에서 로컬스토리지에 저장된 값을 가져와서 리턴
 	const getLocalData = () => {
@@ -80,15 +85,27 @@ function Community() {
 
 	useEffect(() => {
 		localStorage.setItem('post', JSON.stringify(Posts));
-		window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 	}, [Posts]);
 
+	// useEffect(() => {
+	// 	window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+	// });
+
 	return (
-		<Layout name={'Community'} subtit={'자유게시판'}>
+		<Layout name={'community'} h1name={'COMMUNITY'}>
 			<div className='inputBox'>
-				<input type='text' placeholder='제목을 입력하세요' ref={input} />
+				<label for>TITLE</label>
+				<input type='text' placeholder='Please enter a title' ref={input} />
+
 				<br />
-				<textarea cols='30' rows='4' placeholder='본문을 입력하세요' ref={textarea}></textarea>
+
+				<label for>COMMENTS</label>
+				<textarea
+					cols='30'
+					rows='4'
+					placeholder='Please enter the contents'
+					ref={textarea}
+				></textarea>
 				<br />
 				<div className='btnSet'>
 					<button onClick={resetForm}>CANCEL</button>
@@ -118,8 +135,12 @@ function Community() {
 									</div>
 
 									<div className='btnSet'>
-										<button onClick={() => disableUpdate(idx)}>CANCEL</button>
-										<button onClick={() => updatePost(idx)}>UPDATED</button>
+										<button onClick={() => disableUpdate(idx)}>
+											<FontAwesomeIcon icon={faX} />
+										</button>
+										<button onClick={() => updatePost(idx)}>
+											<FontAwesomeIcon icon={faCheck} />
+										</button>
 									</div>
 								</>
 							) : (
@@ -131,8 +152,12 @@ function Community() {
 									</div>
 
 									<div className='btnSet'>
-										<button onClick={() => enableUpdate(idx)}>EDIT</button>
-										<button onClick={() => deletePost(idx)}>DELETE</button>
+										<button onClick={() => enableUpdate(idx)}>
+											<FontAwesomeIcon icon={faPen} />
+										</button>
+										<button onClick={() => deletePost(idx)}>
+											<FontAwesomeIcon icon={faTrashCan} />
+										</button>
 									</div>
 								</>
 							)}

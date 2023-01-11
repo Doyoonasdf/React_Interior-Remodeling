@@ -1,4 +1,5 @@
 .content {
+	background-color: #fffcf0;
 	figure {
 		width: 100%;
 		height: 300px;
@@ -20,7 +21,8 @@
 	> .inner {
 		width: 1180px;
 		min-height: 400px;
-		margin: 100px auto 150px;
+		padding: 150px 0px;
+		margin: 0 auto;
 		position: relative;
 		opacity: 0;
 		transform: translateY(100px);

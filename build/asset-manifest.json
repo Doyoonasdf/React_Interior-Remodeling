@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/React_Interior-Remodeling/static/css/main.24ed7a89.css",
+    "main.js": "/React_Interior-Remodeling/static/js/main.83639f29.js",
+    "index.html": "/React_Interior-Remodeling/index.html",
+    "main.24ed7a89.css.map": "/React_Interior-Remodeling/static/css/main.24ed7a89.css.map",
+    "main.83639f29.js.map": "/React_Interior-Remodeling/static/js/main.83639f29.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24ed7a89.css",
+    "static/js/main.83639f29.js"
+  ]
+}

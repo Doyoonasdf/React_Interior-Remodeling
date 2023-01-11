@@ -7,7 +7,7 @@
 		display: flex;
 		justify-content: center;
 		max-width: 1280px;
-		margin: 100px auto 150px;
+		margin: 0px auto 200px;
 		article {
 			display: flex;
 			justify-content: flex-end;
@@ -33,7 +33,7 @@
 				padding: 5vw;
 				position: relative;
 				width: 82%;
-				background-color: #efefef;
+				background-color: rgba(235, 213, 69, 0.989);
 				.txt {
 					margin-left: 10%;
 					width: 100%;
@@ -59,18 +59,18 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		padding: 10px;
-		height: 800px;
+		height: 650px;
 		.txtBox {
-			width: 25%;
+			width: 13%;
 			position: relative;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
 			align-items: flex-start;
-			margin-top: 10px;
+			margin: auto 0;
 			.facTxt {
-				background-color: #efefef;
-				margin-right: 50px;
+				background-color: rgba(235, 213, 69, 0.989);
+
 				padding: 50px 20px;
 				h2 {
 					font-size: 25px;
@@ -94,6 +94,7 @@
 			padding: 10px;
 			article {
 				width: 100%;
+				box-shadow: -7px 10px 5px 0px rgb(0 0 0 / 30%);
 
 				.facPic {
 					width: 100%;

@@ -1,18 +1,33 @@
-.Community {
+.community {
 	> .inner {
 		.inputBox {
-			width: 100%;
-			border: 1px solid #bbb;
-			padding: 50px;
-			margin-bottom: 50px;
+			width: 60%;
+			margin: 0 auto;
 
-			input[type='text'],
+			label {
+				display: block;
+				font-size: 20px;
+				margin-bottom: 10px;
+				font-weight: bold;
+			}
+			input[type='text'] {
+				border: 0;
+				border-bottom: 2px solid rgba(235, 213, 69, 0.989);
+				font-size: 14px;
+				height: 50px;
+				margin-bottom: 30px;
+				padding: 0px 15px;
+				width: 100%;
+				background-color: #fffcf0;
+			}
 			textarea {
-				width: 50%;
-				padding: 8px 10px;
-				border: 1px solid #aaa;
-				margin-bottom: 20px;
+				border: 2px solid rgba(235, 213, 69, 0.989);
+				font-size: 14px;
+				height: 100px;
+				padding: 15px;
 				resize: none;
+				width: 100%;
+				background-color: #fffcf0;
 			}
 
 			.btnSet {
@@ -30,55 +45,65 @@
 		}
 
 		.showBox {
+			display: flex;
+			flex-wrap: wrap;
 			width: 100%;
-			border: 1px solid #bbb;
-			padding: 50px;
-
 			article {
-				background: #fff;
-				padding: 30px;
-				margin-bottom: 40px;
-				display: flex;
-				justify-content: space-between;
-				align-content: center;
-				flex-wrap: wrap;
-
+				border: 1px solid #333;
+				background-color: #fffcf0;
+				transition: 0.5s;
+				width: calc(100% / 3 - 20px);
+				overflow: hidden;
+				padding: 4vw 2vw;
+				margin: 100px 10px 50px;
+				box-shadow: 6px 7px 5px 0px #222;
+				border-radius: 10%;
+				position: relative;
+				word-break: break-all;
 				.txt {
-					width: calc(100% - 170px);
+					width: 100%;
 					h2 {
 						margin-bottom: 10px;
 					}
-
+					//수정모드
 					input,
 					textarea {
 						width: 100%;
-						padding: 8px 10px;
-						border: 1px solid lightblue;
+						padding: 8px 20px;
+						border: 0;
 						margin-bottom: 20px;
-						background: #e9faff;
+						background-color: #fffcf0;
+						resize: none;
+					}
+					input {
+						font-weight: bold;
+						border-bottom: 2px solid rgba(235, 213, 69, 0.989);
+						font-size: 15px;
+						padding: 20px 50px;
 					}
 					textarea {
 						margin-bottom: 0;
+						height: 200px;
 					}
 				}
 				.btnSet {
-					width: 120px;
+					width: 100%;
 					display: flex;
 					align-items: center;
 					margin-top: 20px;
 					justify-content: flex-end;
-					gap: 10px;
+					gap: 30px;
 
 					button {
 						background: transparent;
 						cursor: pointer;
 						border: none;
-
+						font-size: 20px;
 						&:nth-of-type(1) {
-							color: orange;
+							color: rgba(235, 213, 69, 0.989);
 						}
 						&:nth-of-type(2) {
-							color: orangered;
+							color: #333;
 						}
 					}
 				}

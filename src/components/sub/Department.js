@@ -41,7 +41,11 @@ function Department(end, start = 0, duration = 1000) {
 				<div className='txtBox'>
 					<article className='facTxt'>
 						<h2>Facility information</h2>
-						<p>Introduce about Facility</p>
+						<p>
+							Introduce
+							<br />
+							about Facility
+						</p>
 					</article>
 				</div>
 
