@@ -46,7 +46,7 @@
 								height: 30px;
 								border: none;
 								margin-left: 40px;
-								background-color: rgba(28, 27, 23, 0.989);
+								background-color: rgba(235, 213, 69, 0.989);
 								cursor: pointer;
 								font-size: 14px;
 								line-height: 1px;
@@ -55,9 +55,9 @@
 							}
 							p {
 								font-size: 12px;
-								font-family: 'BlackHanSans';
+
 								font-weight: bold;
-								color: red;
+								color: rgba(235, 213, 69, 0.989);
 								margin-top: 5px;
 								text-align: left;
 								padding-left: 13%;
@@ -66,14 +66,13 @@
 						td {
 							padding: 10px 30px;
 							background-color: #fffcf0;
-
 							input[type='text'] {
 								width: 100%;
 								height: 40px;
 								border-top: none;
 								border-left: none;
 								border-right: none;
-								border-bottom: 2px solid rgba(235, 213, 69, 0.989);
+								border-bottom: 1px solid rgba(235, 213, 69, 0.989);
 								background: none;
 								text-align: center;
 								font-weight: normal;
@@ -86,21 +85,35 @@
 								width: 30%;
 								padding: 5px;
 								font-size: 14px;
+								background-color: #fffcf0;
+								border: 0;
+								border-bottom: 1px solid rgba(235, 213, 69, 0.989);
+							}
+							select {
+								cursor: pointer;
 							}
 							p {
 								font-size: 12px;
-								font-family: 'BlackHanSans';
 								font-weight: bold;
-								color: red;
+								color: rgba(235, 213, 69, 0.989);
 								// color: pink;
 								margin-top: 5px;
 							}
 						}
 					}
+
 					label[for='agree'] {
 						font-size: 16px;
 						text-align: left;
 						cursor: pointer;
+					}
+					input[type='checkbox'] {
+						margin-right: 15px;
+						width: 15px;
+						cursor: pointer;
+						height: 15px;
+
+						vertical-align: center;
 					}
 				}
 			}
@@ -134,7 +147,7 @@
 				padding: 15px;
 				margin-right: 10px;
 				cursor: pointer;
-				background: #fff;
+				background: #fffcf0;
 				transition: 0.5s ease;
 				&.on {
 					background: rgba(235, 213, 69, 0.989);

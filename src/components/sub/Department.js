@@ -13,42 +13,6 @@ function Department(end, start = 0, duration = 1000) {
 
 	return (
 		<Layout name={'department'} h1name={'ABOUT US'}>
-			<div className='introduce'>
-				<h2>INTRODUCE</h2>
-				<ul className='list'>
-					<li>
-						<div>
-							<img src='' alt='' />
-						</div>
-
-						<span>
-							<b className='list_1'>300</b>년
-						</span>
-
-						<p>창립년도</p>
-					</li>
-					<li>
-						<div>
-							<img src='' alt='' />
-						</div>
-						<span>
-							<b className='list_2'>1</b>명
-						</span>
-
-						<p>직원 수</p>
-					</li>
-					<li>
-						<div>
-							<img src='' alt='' />
-						</div>
-						<span>
-							<b className='list_3'>300</b>%
-						</span>
-						<p>연간 성장률</p>
-					</li>
-				</ul>
-			</div>
-
 			<div className='owner'>
 				{/* <h2>The owner of MMA</h2> */}
 				<article>
@@ -77,13 +41,14 @@ function Department(end, start = 0, duration = 1000) {
 				<div className='txtBox'>
 					<article className='facTxt'>
 						<h2>Facility information</h2>
-						<p>Introduce about Auxiliary Facility</p>
+						<p>Introduce about Facility</p>
 					</article>
 				</div>
-				<div className='facBox'>
-					{Fac.map((data, idx) => {
-						return (
-							<article>
+
+				{Fac.map((data, idx) => {
+					return (
+						<div className='facBox' key={idx}>
+							<article key={idx}>
 								<div className='facPic'>
 									<img
 										src={`${process.env.PUBLIC_URL}/img/depIntroduceFac/${data.pic}`}
@@ -92,9 +57,9 @@ function Department(end, start = 0, duration = 1000) {
 									<span>{data.tit}</span>
 								</div>
 							</article>
-						);
-					})}
-				</div>
+						</div>
+					);
+				})}
 			</div>
 		</Layout>
 	);

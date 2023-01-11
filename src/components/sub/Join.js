@@ -30,7 +30,7 @@ function Join() {
 
 		//userid
 		if (value.userid.length < 5) {
-			errs.userid = '입력항목을 5글자 이상 입력하세요';
+			errs.userid = 'Enter an ID of 5 or more characters.';
 		}
 		//pwd
 		if (
@@ -41,38 +41,39 @@ function Join() {
 			!num.test(value.pwd1) ||
 			!spc.test(value.pwd1)
 		) {
-			errs.pwd1 = '비밀번호는 5글자 이상, 영문, 숫자, 특수문자를 포함하여 동일하게 입력하세요';
+			errs.pwd1 =
+				'Password must contain at least 5 characters, including English, numeric, and special characters.';
 		}
 		if (!value.pwd2 || value.pwd1 !== value.pwd2) {
-			errs.pwd2 = '두개의 비밀번호를 동일하게 입력하세요';
+			errs.pwd2 = 'Enter the same two passwords.';
 		}
 
 		//email
 		if (!/@/.test(value.email)) {
-			errs.email = '@를 포함한 전체 이메일 주소를 입력하세요';
+			errs.email = 'Please include @ in your email';
 		}
 
 		//gender
 		if (!value.gender) {
-			errs.gender = '필수 입력항목을 체크해주세요';
+			errs.gender = 'Please select your gender';
 		}
 
 		//agree
 		if (!value.agree) {
-			errs.agree = '필수 입력항목을 체크해주세요';
+			errs.agree = 'Please check the required';
 		}
 
 		//hobby항목이 false면 에러객체 추가
 		if (!value.hobby) {
-			errs.hobby = '필수 입력항목을 체크해주세요';
+			errs.hobby = 'Please select your hobby';
 		}
 
 		if (value.comments.length < 20) {
-			errs.comments = '입력항목을 20글자 이상 입력하세요';
+			errs.comments = 'Please enter at least 20 characters to leave a message';
 		}
 		//edu select함수
 		if (value.edu === '') {
-			errs.edu = '최종 학력을 선택하세요';
+			errs.edu = 'Please select your final education';
 		}
 		return errs;
 	};
@@ -151,10 +152,10 @@ function Join() {
 						<div className='agreement'>
 							<input type='checkbox' name='agree' id='agree' onChange={handleAgree} />
 
-							<label htmlFor='agree'>약관에 동의합니다</label>
+							<label htmlFor='agree'>Agree with this contract </label>
 							<p className='err'>{Err.agree}</p>
 						</div>
-						<h2>MEMBER INFORMATION</h2>
+						{/* <h2>MEMBER INFORMATION</h2> */}
 						{/* <table border='1'> */}
 						<table>
 							<caption className='hidden'>
@@ -171,7 +172,7 @@ function Join() {
 											type='text'
 											name='userid'
 											id='userid'
-											placeholder='아이디를 입력하세요'
+											placeholder='Please enter new ID'
 											value={Val.userid}
 											onChange={handleChange}
 										/>
@@ -188,7 +189,7 @@ function Join() {
 											type='password'
 											name='pwd1'
 											id='pwd1'
-											placeholder='비밀번호를 입력하세요.'
+											placeholder='Please enter password'
 											value={Val.pwd1}
 											onChange={handleChange}
 										/>
@@ -206,7 +207,7 @@ function Join() {
 											type='password'
 											name='pwd2'
 											id='pwd2'
-											placeholder='비밀번호를 재입력하세요'
+											placeholder='Please enter password again'
 											value={Val.pwd2}
 											onChange={handleChange}
 										/>
@@ -224,7 +225,7 @@ function Join() {
 											type='text'
 											name='email'
 											id='email'
-											placeholder='이메일 주소를 입력하세요'
+											placeholder='Please enter email'
 											value={Val.email}
 											onChange={handleChange}
 										/>
@@ -239,11 +240,11 @@ function Join() {
 									</th>
 									<td>
 										<select name='edu' id='edu' onChange={handleSelect}>
-											<option defaultValue=''>선택하세요</option>
-											<option defaultValue='elementary school'>초등학교 졸업</option>
-											<option defaultValue='middle school'>중학교 졸업</option>
-											<option defaultValue='high school'>고등학교 졸업</option>
-											<option defaultValue='college'>대학교 졸업</option>
+											<option defaultValue=''>Please enter to select</option>
+											<option defaultValue='elementary school'>Elementary school</option>
+											<option defaultValue='middle school'>Middle school</option>
+											<option defaultValue='high school'>High school</option>
+											<option defaultValue='college'>College</option>
 										</select>
 										<p className='err'>{Err.edu}</p>
 									</td>
@@ -330,7 +331,7 @@ function Join() {
 											// rows='5'
 											value={Val.comments}
 											onChange={handleChange}
-											placeholder='남기는 말을 입력하세요.'
+											placeholder='Please enter to leave a message'
 										></textarea>
 										<p className='err'>{Err.comments}</p>
 									</td>
@@ -340,7 +341,7 @@ function Join() {
 								<tr>
 									<th colSpan='2'>
 										<input type='RESET' defaultValue='CANCEL' onClick={handleReset} />
-										<input type='submit' defaultValue='send' />
+										<input type='submit' value='SUBMIT' />
 									</th>
 								</tr>
 							</tbody>

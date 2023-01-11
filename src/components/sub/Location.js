@@ -28,7 +28,7 @@ function Location() {
 		const num = /^[0-9]+$/;
 
 		if (!value.name) {
-			errs.name = '이름을 입력하세요';
+			errs.name = 'Please enter your name';
 		}
 
 		// 전화번호 010(셀렉트) + 중간&뒷자리 num입력
@@ -40,7 +40,7 @@ function Location() {
 			!num.test(value.tellEnd)
 			// value.tellMiddle.length !== value.tellEnd.length ||
 		) {
-			errs.tellMiddle = '핸드폰 번호를 입력해주세요';
+			errs.tellMiddle = 'Please enter your PhoneNumber';
 		}
 		// if (value.tell1 === '' && value.tellMiddle.length !== 4 && !num.test(value.tellMiddle)) {
 		// 	errs.tellEnd = '핸드폰 번호를 입력해주세요';
@@ -50,10 +50,10 @@ function Location() {
 		// }
 
 		if (!value.agree) {
-			errs.agree = '필수 입력항목을 체크해주세요';
+			errs.agree = 'Please check the required';
 		}
 		if (!/@/.test(value.email)) {
-			errs.email = '@를 포함한 전체 이메일 주소를 입력하세요';
+			errs.email = 'Please include @ in your email';
 		}
 		return errs;
 	};
@@ -180,6 +180,7 @@ function Location() {
 												name='name'
 												id='name'
 												value={Val.name}
+												placeholder='Please enter your name'
 												onChange={handleChange}
 											/>
 											<p className='err'>{Err.name}</p>
@@ -225,7 +226,7 @@ function Location() {
 												type='text'
 												name='email'
 												id='email'
-												placeholder='이메일 주소를 입력해 주세요'
+												placeholder='Please enter email'
 												value={Val.email}
 												onChange={handleChange}
 											/>
@@ -235,7 +236,7 @@ function Location() {
 									<tr>
 										<th colSpan={2}>
 											<input type='checkbox' name='agree' id='agree' onChange={handleAgree} />
-											<label htmlFor='agree'>약관에 동의합니다 </label>
+											<label htmlFor='agree'>Agree with this contract </label>
 											<input type='submit' value='SUBMIT' />
 											<p className='err'>{Err.agree}</p>
 										</th>
