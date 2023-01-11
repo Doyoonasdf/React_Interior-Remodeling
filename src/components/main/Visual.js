@@ -5,7 +5,7 @@ function Visual() {
 			<h4>VAN GOGH</h4>
 			<div className='inner'>
 				<div className='pic'>
-					<img src='' alt='' />
+					<img src={path + '/img/mainvisual/main.jpg'} alt='main' />
 				</div>
 				<div className='txt'>
 					<h2>MOR Museum Art</h2>

@@ -1,21 +1,15 @@
 import Layout from '../common/Layout';
 import { useState, useEffect } from 'react';
-
+import axios from 'axios';
 function Department(end, start = 0, duration = 1000) {
-	const [count, setCount] = useState(start);
+	const path = process.env.PUBLIC_URL;
+	const [Fac, setFac] = useState([]);
+
 	useEffect(() => {
-		let currentNum = start;
-		const delay = parseInt(duration / end);
-
-		const countUp = setInterval(() => {
-			currentNum++;
-			setCount(currentNum);
-
-			if (currentNum === end) {
-				clearInterval(countUp);
-			}
-		}, delay);
-	}, [end, start, duration]);
+		axios.get(`${process.env.PUBLIC_URL}/DB/fac.json`).then((json) => {
+			setFac(json.data.fac);
+		});
+	}, []);
 
 	return (
 		<Layout name={'department'} h1name={'ABOUT US'}>
@@ -56,14 +50,14 @@ function Department(end, start = 0, duration = 1000) {
 			</div>
 
 			<div className='owner'>
-				<h2>The owner of MMA</h2>
+				{/* <h2>The owner of MMA</h2> */}
 				<article>
 					<div className='pic'>
-						<img src='' alt='' />
+						<img src={path + '/img/department/member6.jpg'} alt='owner' />
 					</div>
 					<div className='box'>
 						<div className='txt'>
-							<h3>Lorem ipsum dolor sit amet.</h3>
+							<h3>The owner of MMA</h3>
 							<p>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odio dicta iste
 								facilis possimus hic eligendi. Amet quis itaque temporibus. Numquam explicabo minus
@@ -72,9 +66,7 @@ function Department(end, start = 0, duration = 1000) {
 								doloremque facilis blanditiis fugit ad accusamus sequi sint quos aspernatur
 								obcaecati quidem ut saepe, iure veniam distinctio magni! Earum ipsam asperiores
 								quibusdam ad consequuntur et fugit commodi fuga officia dolorum, dolorem dolore,
-								recusandae nihil debitis, itaque nesciunt alias quos? Dolor, omnis optio! Facere
-								culpa labore dolorum voluptas tenetur, sequi tempora commodi totam fugiat numquam
-								voluptates quam, suscipit minus.
+								recusandae nihil debitis, itaque nesciunt alias quos
 							</p>
 						</div>
 					</div>
@@ -82,18 +74,16 @@ function Department(end, start = 0, duration = 1000) {
 			</div>
 
 			<div className='fac'>
-				<h2>Facility information</h2>
-				<div className='fac_wrap'>
-					<article className='txt'>
-						<h3>Introduce about Auxiliary Facility</h3>
+				<div className='facWrap'>
+					<article className='facTxt'>
+						<h2>Facility information</h2>
+						<p>Introduce about Auxiliary Facility</p>
 					</article>
-
+				</div>
+				<div className='facPic'>
 					<article>
-						{/* <img
-							src={path + 'img/index_LatestProjects/Home - BDS Contract.jpg'}
-							alt='galleryPreview1'
-						/>
-						<Link to='/Gallery'>VIEW MORE</Link> */}
+						{/* <img src="img/index_LatestProjects/Home - BDS Contract.jpg" alt="">
+          <a href="gallery.html">VIEW MORE</a> */}
 					</article>
 				</div>
 			</div>

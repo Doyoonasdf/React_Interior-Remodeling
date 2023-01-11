@@ -1,6 +1,7 @@
 import Layout from '../common/Layout';
 import { useEffect, useState, useRef } from 'react';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 //새로 받은 아이디와 키
 //  키  41968bb5751272456795594b64f64fb7
 // 아이디 197355893@N03/
@@ -61,7 +62,7 @@ function Gallery() {
 
 	return (
 		<>
-			<Layout name={'gallery'} subtit={'OUR PROJECTS'}>
+			<Layout name={'gallery'} h1name={'GALLERY'}>
 				<div className='controls'>
 					<div className='searchBox'>
 						<input
@@ -70,7 +71,9 @@ function Gallery() {
 							placeholder='검색어를 입력하세요'
 							onKeyUp={(e) => e.key === 'Enter' && showSearch()}
 						/>
-						<button onClick={showSearch}>Search</button>
+						<button onClick={showSearch}>
+							<FontAwesomeIcon icon={faMagnifyingGlass} className='Glass' />
+						</button>
 					</div>
 
 					<nav>

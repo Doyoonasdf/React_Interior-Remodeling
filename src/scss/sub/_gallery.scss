@@ -1,4 +1,5 @@
 .gallery {
+	background-color: #fffcf0;
 	.loading {
 		position: absolute;
 		top: 50%;
@@ -13,7 +14,7 @@
 		justify-content: space-between;
 		.searchBox {
 			margin-bottom: 50px;
-			padding: 0 3vw;
+			padding: 0vw 3vw;
 			width: 100%;
 			input {
 				border: 3px solid rgba(235, 213, 69, 0.989);
@@ -25,10 +26,15 @@
 			button {
 				background-color: rgba(235, 213, 69, 0.989);
 				border: 3px solid rgba(235, 213, 69, 0.989);
-				float: left;
+				// float: left;
 				padding: 20px;
 				width: 5%;
+				overflow: hidden;
 				cursor: pointer;
+				.Glass {
+					color: #fff;
+					text-align: center;
+				}
 			}
 		}
 

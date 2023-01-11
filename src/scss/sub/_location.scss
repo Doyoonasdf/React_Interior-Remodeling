@@ -3,6 +3,7 @@
 	min-height: 500px;
 	transition: 1s;
 	overflow: hidden;
+	background-color: #fffcf0;
 	.upper {
 		display: flex;
 		flex-wrap: wrap;
@@ -64,7 +65,7 @@
 						}
 						td {
 							padding: 10px 30px;
-							background: white;
+							background-color: #fffcf0;
 
 							input[type='text'] {
 								width: 100%;
@@ -72,7 +73,7 @@
 								border-top: none;
 								border-left: none;
 								border-right: none;
-								border-bottom: 1px solid rgba(235, 213, 69, 0.989);
+								border-bottom: 2px solid rgba(235, 213, 69, 0.989);
 								background: none;
 								text-align: center;
 								font-weight: normal;

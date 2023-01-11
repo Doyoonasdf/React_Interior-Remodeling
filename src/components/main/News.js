@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 import Anim from '../../asset/anime';
 
 function News({ Scrolled, currentPos }) {
-	console.log('Scrolled', Scrolled);
-	console.log('posArr', currentPos);
-
 	const getLocalData = () => {
 		const dummyPosts = [
 			{

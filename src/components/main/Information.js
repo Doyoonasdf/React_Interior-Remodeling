@@ -12,8 +12,9 @@ function Information({ Scrolled, currentPos }) {
 	scroll < 0 && (scroll = 0);
 	const [Slides, setSlides] = useState([]);
 	const slider = useRef('');
-	//SldEnableClick 재이벤트방지구문
-	// let SldEnableClick = true;
+
+	//슬라이더 광클릭방지
+	const [EnableClick, setEnableClick] = useState(true);
 
 	const init = () => {
 		const panel = slider.current.querySelector('ul');
@@ -27,7 +28,7 @@ function Information({ Scrolled, currentPos }) {
 
 	const nextSlide = () => {
 		const panel = slider.current.children[0];
-
+		if (!EnableClick) return;
 		new Anim(panel, {
 			prop: 'margin-left',
 			value: '-200%',
@@ -35,13 +36,14 @@ function Information({ Scrolled, currentPos }) {
 			callback: () => {
 				panel.append(panel.firstElementChild);
 				panel.style.marginLeft = '-100%';
+				setEnableClick(true);
 			},
 		});
 	};
 
 	const prevSlide = () => {
 		const panel = slider.current.children[0];
-
+		if (!EnableClick) return;
 		new Anim(panel, {
 			prop: 'margin-left',
 			value: '0%',
@@ -49,6 +51,7 @@ function Information({ Scrolled, currentPos }) {
 			callback: () => {
 				panel.prepend(panel.lastElementChild);
 				panel.style.marginLeft = '-100%';
+				setEnableClick(true);
 			},
 		});
 	};

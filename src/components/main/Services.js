@@ -17,9 +17,7 @@ function Services() {
 		setMainservice(result.data.mainservice);
 	}, []);
 
-	useEffect(() => {
-		console.log(Mainservice);
-	}, [Mainservice]);
+	useEffect(() => {}, [Mainservice]);
 
 	return (
 		<section id='services' className='scroll_view'>
