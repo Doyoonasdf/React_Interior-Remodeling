@@ -17,6 +17,7 @@ function Pics() {
 							if (idx >= 5) return null;
 							return (
 								<div
+									key={idx}
 									className='pic'
 									onClick={() => {
 										setIndex(idx);

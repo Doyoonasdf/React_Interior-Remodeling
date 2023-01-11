@@ -27,8 +27,10 @@ function Information({ Scrolled, currentPos }) {
 	};
 
 	const nextSlide = () => {
-		const panel = slider.current.children[0];
 		if (!EnableClick) return;
+		setEnableClick(false);
+		const panel = slider.current.children[0];
+
 		new Anim(panel, {
 			prop: 'margin-left',
 			value: '-200%',
@@ -42,8 +44,11 @@ function Information({ Scrolled, currentPos }) {
 	};
 
 	const prevSlide = () => {
-		const panel = slider.current.children[0];
 		if (!EnableClick) return;
+		//다시 EnableClick을 false로 바꿔줘야 함
+		setEnableClick(false);
+		const panel = slider.current.children[0];
+
 		new Anim(panel, {
 			prop: 'margin-left',
 			value: '0%',

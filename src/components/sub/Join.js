@@ -146,7 +146,7 @@ function Join() {
 						<h2>
 							<label htmlFor='terms'>MEMBER AGREEMENT</label>
 						</h2>
-						<textarea name='terms' id='terms' cols='30' rows='10' value={terms} readOnly />
+						<textarea name='terms' id='terms' cols='30' rows='10' defaultValue={terms} readOnly />
 						{/*  agreement    */}
 						<div className='agreement'>
 							<input type='checkbox' name='agree' id='agree' onChange={handleAgree} />
@@ -239,11 +239,11 @@ function Join() {
 									</th>
 									<td>
 										<select name='edu' id='edu' onChange={handleSelect}>
-											<option value=''>선택하세요</option>
-											<option value='elementary school'>초등학교 졸업</option>
-											<option value='middle school'>중학교 졸업</option>
-											<option value='high school'>고등학교 졸업</option>
-											<option value='college'>대학교 졸업</option>
+											<option defaultValue=''>선택하세요</option>
+											<option defaultValue='elementary school'>초등학교 졸업</option>
+											<option defaultValue='middle school'>중학교 졸업</option>
+											<option defaultValue='high school'>고등학교 졸업</option>
+											<option defaultValue='college'>대학교 졸업</option>
 										</select>
 										<p className='err'>{Err.edu}</p>
 									</td>
@@ -339,8 +339,8 @@ function Join() {
 								{/* button set */}
 								<tr>
 									<th colSpan='2'>
-										<input type='RESET' value='CANCEL' onClick={handleReset} />
-										<input type='submit' value='send' />
+										<input type='RESET' defaultValue='CANCEL' onClick={handleReset} />
+										<input type='submit' defaultValue='send' />
 									</th>
 								</tr>
 							</tbody>

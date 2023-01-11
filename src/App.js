@@ -29,7 +29,7 @@ function App() {
 	const menuOpen = useRef(null);
 	useEffect(() => {
 		dispatch(fetchYoutube());
-		dispatch(fetchFlickr({ type: 'user', user: '197146982@N03' }));
+		dispatch(fetchFlickr({ type: 'user', user: '197355893@N03' }));
 	}, [dispatch]);
 	return (
 		<>

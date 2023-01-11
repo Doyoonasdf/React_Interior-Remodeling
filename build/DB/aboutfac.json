@@ -1,0 +1,20 @@
+{
+  "aboutfac": [
+    {
+      "pic": "IntroduceFac1.jpg",
+      "tit": "Mini Library"
+    },
+    {
+      "pic": "IntroduceFac2.jpg",
+      "tit": "Cafeteria"
+    },
+    {
+      "pic": "IntroduceFac3.jpg",
+      "tit": "Rest area and Book"
+    },
+    {
+      "pic": "IntroduceFac4.jpg",
+      "tit": "For kidszone"
+    }
+  ]
+}

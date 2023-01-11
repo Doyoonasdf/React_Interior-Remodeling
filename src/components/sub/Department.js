@@ -6,8 +6,8 @@ function Department(end, start = 0, duration = 1000) {
 	const [Fac, setFac] = useState([]);
 
 	useEffect(() => {
-		axios.get(`${process.env.PUBLIC_URL}/DB/fac.json`).then((json) => {
-			setFac(json.data.fac);
+		axios.get(`${process.env.PUBLIC_URL}/DB/aboutfac.json`).then((json) => {
+			setFac(json.data.aboutfac);
 		});
 	}, []);
 
@@ -80,12 +80,16 @@ function Department(end, start = 0, duration = 1000) {
 						<p>Introduce about Auxiliary Facility</p>
 					</article>
 				</div>
-				<div className='facPic'>
-					<article>
-						{/* <img src="img/index_LatestProjects/Home - BDS Contract.jpg" alt="">
-          <a href="gallery.html">VIEW MORE</a> */}
-					</article>
-				</div>
+
+				{Fac.map((data, idx) => {
+					return (
+						<div className='facPic'>
+							<article>
+								<img src={`${process.env.PUBLIC_URL}/img/${data.pic}`} alt={data.tit} />
+							</article>
+						</div>
+					);
+				})}
 			</div>
 		</Layout>
 	);
