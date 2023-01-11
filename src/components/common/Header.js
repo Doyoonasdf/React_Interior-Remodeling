@@ -2,15 +2,14 @@ import { Link, NavLink } from 'react-router-dom';
 import { useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { toggle } from '../../redux/menuSlice';
+import { useSelector, useDispatch } from 'react-redux';
 
 function Header(props) {
 	const active = { color: 'rgba(235, 213, 69, 0.989)' };
+	const dispatch = useDispatch();
+	const menu = useSelector((store) => store.menu.open);
 
-	const [IsOn, setIsOn] = useState('');
-	const btnCallClick = (e) => {
-		e.preventDefault();
-		IsOn == '' ? setIsOn('on') : setIsOn('');
-	};
 	return (
 		<>
 			<header className={props.type}>
@@ -44,10 +43,9 @@ function Header(props) {
 
 					<Link
 						to='#'
-						className={`btnCall ${IsOn}`}
-						onClick={(e) => {
-							btnCallClick(e);
-							props.menuOpen.current.toggle();
+						className={menu ? 'btnCall on' : 'btnCall'}
+						onClick={() => {
+							dispatch(toggle());
 						}}
 					>
 						<span>메뉴호출</span>

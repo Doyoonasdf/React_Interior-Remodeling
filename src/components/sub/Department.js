@@ -74,22 +74,27 @@ function Department(end, start = 0, duration = 1000) {
 			</div>
 
 			<div className='fac'>
-				<div className='facWrap'>
+				<div className='txtBox'>
 					<article className='facTxt'>
 						<h2>Facility information</h2>
 						<p>Introduce about Auxiliary Facility</p>
 					</article>
 				</div>
-
-				{Fac.map((data, idx) => {
-					return (
-						<div className='facPic'>
+				<div className='facBox'>
+					{Fac.map((data, idx) => {
+						return (
 							<article>
-								<img src={`${process.env.PUBLIC_URL}/img/${data.pic}`} alt={data.tit} />
+								<div className='facPic'>
+									<img
+										src={`${process.env.PUBLIC_URL}/img/depIntroduceFac/${data.pic}`}
+										alt={data.tit}
+									/>
+									<span>{data.tit}</span>
+								</div>
 							</article>
-						</div>
-					);
-				})}
+						);
+					})}
+				</div>
 			</div>
 		</Layout>
 	);
