@@ -76,10 +76,10 @@ function Gallery() {
 						</button>
 					</div>
 
-					{/* <nav> */}
-					{/* <button onClick={showSample}>SAMPLE</button> */}
-					{/* <button onClick={showMine}>GALLERY</button>
-					</nav> */}
+					<nav>
+						{/* <button onClick={showSample}>SAMPLE</button> */}
+						<button onClick={showMine}>GALLERY</button>
+					</nav>
 				</div>
 
 				{Loading && (

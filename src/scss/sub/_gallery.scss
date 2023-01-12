@@ -11,16 +11,17 @@
 		padding: 10px;
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: end;
 		.searchBox {
-			margin-bottom: 50px;
+			margin-bottom: 30px;
+			margin-left: 10%;
 			padding: 0vw 3vw;
 			width: 100%;
 			input {
 				border: 3px solid rgba(235, 213, 69, 0.989);
 				float: left;
 				padding: 20px 10px;
-				width: 95%;
+				width: 80%;
 				text-align: center;
 			}
 			button {
@@ -43,7 +44,7 @@
 				width: 130px;
 				height: 28px;
 				border: none;
-				background: #555;
+				background-color: rgba(235, 213, 69, 0.989);
 				font: 12px/1 'arial';
 				color: #fff;
 				cursor: pointer;

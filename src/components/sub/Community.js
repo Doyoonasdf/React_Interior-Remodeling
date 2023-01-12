@@ -97,12 +97,12 @@ function Community() {
 	return (
 		<Layout name={'community'} h1name={'COMMUNITY'}>
 			<div className='inputBox'>
-				<label for>TITLE</label>
+				<label htmlFor='title'>TITLE</label>
 				<input type='text' placeholder='Please enter a title' ref={input} />
 
 				<br />
 
-				<label for>COMMENTS</label>
+				<label htmlFor='comments'>COMMENTS</label>
 				<textarea
 					cols='30'
 					rows='4'

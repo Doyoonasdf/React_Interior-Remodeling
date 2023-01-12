@@ -157,7 +157,7 @@
 			button {
 				// margin-left: 10%;
 				width: 60px;
-				background: #fff;
+				background: #efefef;
 				font: bold 12px/1 'arial';
 				color: #333;
 				// border: 2px solid rgba(235, 213, 69, 0.989);
@@ -183,6 +183,7 @@
 		width: 100%;
 		height: 100%;
 		display: flex;
+		position: relative;
 		overflow: hidden;
 		article {
 			border: 3px solid rgba(235, 213, 69, 0.989);
@@ -197,16 +198,19 @@
 			flex-direction: column;
 			justify-content: space-evenly;
 			margin-right: 20px;
-			transition: 1s ease;
+			transition: 0.3s ease;
 			cursor: pointer;
 			.loct {
-				font-size: 40px;
+				font-size: 30px;
+				transition: 0.3s ease;
 			}
 			.phone {
-				font-size: 40px;
+				font-size: 30px;
+				transition: 0.3s ease;
 			}
 			.env {
-				font-size: 40px;
+				font-size: 30px;
+				transition: 0.3s ease;
 			}
 			h3 {
 				color: #000;
@@ -214,10 +218,16 @@
 			}
 			p {
 				color: #333;
-				font-size: 18px;
+				font-size: 16px;
 			}
 			&:hover {
-				transform: scale(1.2);
+				background-color: rgba(235, 213, 69, 0.989);
+				color: #fff;
+				.loct,
+				.phone,
+				.env {
+					scale: (1.2);
+				}
 			}
 		}
 	}

@@ -36,7 +36,7 @@
 				cursor: pointer;
 				padding: 10px;
 				overflow: hidden;
-				position: relative;
+
 				filter: grayscale(0.5);
 				&:nth-of-type(1) {
 					width: calc(100% / 2);
@@ -66,6 +66,7 @@
 				.pic {
 					height: 100%;
 					width: 100%;
+					overflow: hidden;
 					img {
 						width: 100%;
 						height: 100%;
@@ -84,7 +85,7 @@
 						height: 50px;
 						cursor: pointer;
 						border: #efefef;
-						background-color: red;
+						background-color: #b61414;
 						color: #efefef;
 						display: block;
 						position: absolute;
@@ -95,7 +96,8 @@
 						border-radius: 50%;
 						transition: 1s;
 						.play {
-							font-size: 1vw;
+							margin-left: 5px;
+							font-size: 25px;
 							transition: 0.2s;
 							&:hover {
 								transform: scale(1.5);
