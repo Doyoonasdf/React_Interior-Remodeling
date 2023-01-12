@@ -1,6 +1,5 @@
 import Header from '../common/Header';
 import Information from './Information';
-import LatestProjects from './LatestProjects';
 import Services from './Services';
 import Visual from './Visual';
 import News from './News';

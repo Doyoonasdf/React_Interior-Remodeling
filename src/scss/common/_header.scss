@@ -129,8 +129,9 @@ header {
 		position: absolute;
 		top: 0;
 		left: 0px;
-		background: transparent;
-		border-bottom: 1px solid #ccc;
+		// background: transparent;
+		background-color: hsl(58deg 40% 84% / 25%);
+		// border-bottom: 1px solid #ccc;
 		z-index: 2;
 		// background: rgba(235, 213, 69, 0.989)
 		.inner {
@@ -138,13 +139,14 @@ header {
 				left: -10vw;
 				a {
 					font-size: 30px;
-					color: rgba(235, 213, 69, 0.989);
+					color: #ccc;
 				}
 			}
 			#gnb {
 				right: -10vw;
 				li a {
 					color: #222;
+					// color: rgba(235, 213, 69, 0.989);
 				}
 			}
 		}

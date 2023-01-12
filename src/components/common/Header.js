@@ -22,22 +22,38 @@ function Header(props) {
 
 					<ul id='gnb'>
 						<li>
-							<NavLink to='/department'>Department</NavLink>
+							<NavLink to='/department' activeStyle={active}>
+								Department
+							</NavLink>
+						</li>
+
+						<li>
+							<NavLink to='/community' activeStyle={active}>
+								Community
+							</NavLink>
+						</li>
+
+						<li>
+							<NavLink to='/gallery' activeStyle={active}>
+								Gallery
+							</NavLink>
 						</li>
 						<li>
-							<NavLink to='/gallery'>Gallery</NavLink>
+							<NavLink to='/youtube' activeStyle={active}>
+								Youtube
+							</NavLink>
 						</li>
+
 						<li>
-							<NavLink to='/youtube'>Youtube</NavLink>
+							<NavLink to='/join' activeStyle={active}>
+								Membership
+							</NavLink>
 						</li>
+
 						<li>
-							<NavLink to='/community'>Community</NavLink>
-						</li>
-						<li>
-							<NavLink to='/location'>Location</NavLink>
-						</li>
-						<li>
-							<NavLink to='/join'>Membership</NavLink>
+							<NavLink to='/location' activeStyle={active}>
+								Location
+							</NavLink>
 						</li>
 					</ul>
 

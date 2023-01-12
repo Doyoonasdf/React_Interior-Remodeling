@@ -10,12 +10,9 @@ function Layout(props) {
 	return (
 		<section className={`content ${props.name}`} ref={frame}>
 			<figure>
-				<h1>
-					{props.h1name}
-					{/* <span>{props.subtit}</span> */}
-				</h1>
+				<h1>{props.h1name}</h1>
 			</figure>
-			<div className='inner scroll_view'>
+			<div className='inner'>
 				{props.children}
 				{/* // 컨텐츠가 들어가는 부분 */}
 			</div>

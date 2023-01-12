@@ -95,7 +95,8 @@
 								transition: 0.5s;
 								cursor: pointer;
 								&:hover {
-									background-color: #000;
+									background-color: rgba(235, 213, 69, 0.989);
+									border-color: rgba(235, 213, 69, 0.989);
 									color: #efefef;
 								}
 							}

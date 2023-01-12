@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import Layout from '../common/Layout';
 function Result() {
 	return (
-		<Layout name={'result'}>
-			{/*       <h1 class="hidden">WELCOME <span>회원가입을 축하합니다!</span></h1> */}
+		<Layout name={'result'} h1name={'WELLCOME TO MMA'}>
 			<div className='wrap'>
 				<article>
 					<img src={`${process.env.PUBLIC_URL}/img/`} alt='' />
