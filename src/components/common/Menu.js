@@ -11,7 +11,7 @@ import { close } from '../../redux/menuSlice';
 function Menu() {
 	const dispatch = useDispatch();
 	const menu = useSelector((store) => store.menu.open);
-	const active = { color: 'orange' };
+	const active = { color: 'rgba(235, 213, 69, 0.989)' };
 
 	useEffect(() => {
 		window.addEventListener('resize', () => {
@@ -30,8 +30,7 @@ function Menu() {
 					onClick={() => dispatch(close())}
 				>
 					<h1>
-						<Link to='/'>SMK</Link>
-						<span>INTERIOR DESIGN STUDIO</span>
+						<Link to='/'>MMA</Link>
 					</h1>
 
 					<ul id='gnbMo'>
