@@ -2,9 +2,9 @@ function Visual() {
 	const path = process.env.PUBLIC_URL;
 	return (
 		<figure id='visual' className='scroll_view'>
-			<h4>VAN GOGH</h4>
 			<div className='inner'>
 				<div className='pic'>
+					<h4>VAN GOGH</h4>
 					<img src={path + '/img/mainvisual/main.jpg'} alt='main' />
 				</div>
 				<div className='txt'>

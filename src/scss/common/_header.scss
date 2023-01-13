@@ -129,21 +129,20 @@ header {
 		position: absolute;
 		top: 0;
 		left: 0px;
-		// background: transparent;
 		background-color: hsl(58deg 40% 84% / 25%);
-		// border-bottom: 1px solid #ccc;
 		z-index: 2;
-		// background: rgba(235, 213, 69, 0.989)
 		.inner {
+			width: 100%;
+			height: 100%;
 			h1 {
-				left: -10vw;
+				left: 5vw;
 				a {
 					font-size: 30px;
 					color: #ccc;
 				}
 			}
 			#gnb {
-				right: -10vw;
+				right: 5vw;
 				li a {
 					color: #222;
 					// color: rgba(235, 213, 69, 0.989);
@@ -168,4 +167,7 @@ header {
 			}
 		}
 	}
+}
+
+@media screen and (max-width: $mobile) {
 }
