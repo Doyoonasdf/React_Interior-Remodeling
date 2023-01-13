@@ -4,15 +4,16 @@
 	position: relative;
 	z-index: 1;
 	background-color: #fffcf0;
-
+	padding: 100px 0px 0px;
 	.inner {
-		width: 1180px;
-		margin: 0px auto;
+		width: 100%;
+		max-width: 1180px;
 		position: relative;
+		padding: 0 10px;
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
-		padding: 100px 0px 0px;
+		margin: 0px auto;
 		z-index: 1;
 		.pic {
 			overflow: hidden;
