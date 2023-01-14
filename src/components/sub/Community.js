@@ -88,11 +88,11 @@ function Community() {
 		// 	window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 	}, [Posts]);
 
-	useEffect(() => {
-		setTimeout(() => {
-			window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-		}, 1000);
-	}, []);
+	// useEffect(() => {
+	// 	setTimeout(() => {
+	// 		window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+	// 	}, 1000);
+	// }, []);
 
 	return (
 		<Layout name={'community'} h1name={'COMMUNITY'}>

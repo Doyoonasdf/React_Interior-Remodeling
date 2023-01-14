@@ -2,7 +2,7 @@
 	width: 100%;
 	height: 100vh;
 	position: relative;
-	padding: 100px 0px 150px;
+	padding: 150px 0px 150px;
 	background-color: #fffcf0;
 	overflow: hidden;
 	.inner {
@@ -19,6 +19,11 @@
 			font-weight: 600;
 			font-size: 40px;
 			color: #222;
+			margin-bottom: 50px;
+
+			opacity: 0;
+			transition: 0.7s;
+			transform: translateY(100px);
 		}
 		.wrap {
 			width: 100%;
@@ -32,43 +37,43 @@
 				float: left;
 				height: 100%;
 				width: 100%;
-				transform: translateY(100px);
-				transition: 0.3s;
+
 				position: relative;
 				cursor: pointer;
 				padding: 10px;
 				overflow: hidden;
-
 				filter: grayscale(0.5);
+
+				opacity: 0;
+				transition: 0.5s;
+				transition-delay: 0.3s;
+				transform: translateY(100px);
 				&:nth-of-type(1) {
 					width: calc(100% / 2);
 					height: calc(100% / 2);
-					transition-delay: 0s;
 				}
 				&:nth-of-type(2) {
 					width: calc(100% / 2);
 					height: calc(100% / 2);
-					transition-delay: 0.3s;
 				}
 				&:nth-of-type(3) {
 					width: calc(100% / 3);
 					height: calc(100% / 3);
-					transition-delay: 0.6s;
 				}
 				&:nth-of-type(4) {
 					width: calc(100% / 3);
 					height: calc(100% / 3);
-					transition-delay: 0.9s;
 				}
 				&:nth-of-type(5) {
 					width: calc(100% / 3);
 					height: calc(100% / 3);
-					transition-delay: 1.2s;
 				}
+
 				.pic {
 					height: 100%;
 					width: 100%;
 					overflow: hidden;
+
 					img {
 						width: 100%;
 						height: 100%;
@@ -76,16 +81,16 @@
 						transition: 1s;
 					}
 				}
-				&.on {
-					transform: translateY(0px);
-				}
+
 				.con {
 					width: 100%;
 					height: 100%;
+
 					button {
 						width: 50px;
 						height: 50px;
 						cursor: pointer;
+						border-radius: 50%;
 						border: #efefef;
 						background-color: #b61414;
 						color: #efefef;
@@ -93,10 +98,8 @@
 						position: absolute;
 						left: 50%;
 						top: 50%;
-						transform: translate(-50%, -25%);
-						opacity: 1;
-						border-radius: 50%;
-						transition: 1s;
+						transform: translate(-50%, -50%);
+
 						.play {
 							margin-left: 5px;
 							font-size: 25px;
@@ -113,6 +116,20 @@
 						transform: scale(1.2);
 					}
 				}
+			}
+		}
+	}
+
+	&.on {
+		h2 {
+			transform: translateY(0px);
+			opacity: 1;
+		}
+
+		.wrap {
+			article {
+				transform: translateY(0px);
+				opacity: 1;
 			}
 		}
 	}

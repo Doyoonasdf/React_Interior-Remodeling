@@ -18,6 +18,10 @@
 			color: #222;
 			margin-bottom: 50px;
 			font-family: $Engtxt;
+
+			opacity: 0;
+			transition: 1s;
+			transform: translateX(100px);
 		}
 		#slider {
 			width: 100%;
@@ -25,6 +29,10 @@
 			position: relative;
 			margin: 0px auto;
 			overflow: hidden;
+
+			transition: 1s;
+			transform: translateX(100px);
+			opacity: 0;
 
 			ul {
 				//width: calc(100% * 3);
@@ -67,7 +75,8 @@
 							position: relative;
 							height: 500px;
 							h2 {
-								color: rgba(235, 213, 69, 0.989);
+								// color: rgba(235, 213, 69, 0.989);
+								color: #222;
 								font-size: 35px;
 								margin-bottom: 20px;
 								font-family: $Engtxt;
@@ -159,6 +168,18 @@
 						object-fit: cover;
 					}
 				}
+			}
+		}
+	}
+	&.on {
+		.inner {
+			h2 {
+				transform: translateX(0px);
+				opacity: 1;
+			}
+			#slider {
+				transform: translateX(0px);
+				opacity: 1;
 			}
 		}
 	}

@@ -1,7 +1,4 @@
-import { useRef, useEffect, useState } from 'react';
-
-import { Link } from 'react-router-dom';
-import Anim from '../../asset/anime';
+import { useRef, useEffect } from 'react';
 
 function News({ Scrolled, currentPos }) {
 	const getLocalData = () => {
@@ -76,7 +73,6 @@ function News({ Scrolled, currentPos }) {
 								<article key={idx}>
 									<h5>{data.title}</h5>
 									<p>{data.content}</p>
-									<Link to='/community'>VIEW MORE</Link>
 								</article>
 							);
 						})}

@@ -7,7 +7,7 @@ function Pics({ Scrolled, currentPos }) {
 	const [index, setIndex] = useState(0);
 	const Items = useSelector((store) => store.flickr.data);
 
-	const base = -window.innerHeight / 3;
+	const base = -window.innerHeight / 5;
 	let scroll = Scrolled - base - currentPos || 0;
 	scroll < 0 && (scroll = 0);
 
@@ -17,16 +17,16 @@ function Pics({ Scrolled, currentPos }) {
 				<div className='inner'>
 					<h1
 						style={{
-							transform: `translateX(${100 + scroll * 2}px) scale(${1 + scroll / 200})`,
+							transform: `translateX(${100 + scroll * 2}px) `,
 							opacity: 1 - scroll / 300,
 						}}
 					>
-						GALLERY
+						GALLERY GALLERY GALLERY GALLERY
 					</h1>
 					<h2>GALLERY</h2>
 					<div className='wrap'>
 						{Items.map((pic, idx) => {
-							if (idx >= 5) return null;
+							if (idx >= 6) return null;
 							return (
 								<div
 									key={idx}

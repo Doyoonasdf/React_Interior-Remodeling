@@ -3,7 +3,7 @@
 	width: 100%;
 	height: 100vh;
 	position: relative;
-	padding: 150px 0px 0px;
+	padding: 100px 0px 0px;
 	background-color: #fffcf0;
 	overflow: hidden;
 	.inner {
@@ -31,6 +31,10 @@
 			color: #222;
 			margin-bottom: 50px;
 			font-family: $Engtxt;
+
+			opacity: 0;
+			transition: 1s;
+			transform: translateY(100px);
 		}
 		.wrap {
 			display: flex;
@@ -39,16 +43,24 @@
 			gap: 20px;
 			position: relative;
 			overflow: hidden;
+			flex-wrap: wrap;
+			padding-bottom: 20px;
 			.pic {
+				opacity: 0;
+				transition: 1s;
+				transform: translateY(100px);
+				//
 				cursor: pointer;
-				width: 100%;
+				width: calc(100% / 4);
 				overflow: hidden;
 				//
 				height: calc((1180px) / 4);
 				position: relative;
-				transition: 0.5s;
+				transition: 0.4s;
+				border-radius: 50%;
 				&:hover {
 					transform: translate((-5px, -5px));
+					border-radius: 50%;
 					box-shadow: 10px 10px 0 rgba(235, 213, 69, 0.989);
 					img {
 						filter: grayscale(0.6);
@@ -63,9 +75,12 @@
 					width: 100%;
 					transition: 0.5s;
 					object-position: center;
+					border-radius: 50%;
 				}
 
 				.view {
+					border-radius: 50%;
+
 					width: 100%;
 					height: calc(100%);
 
@@ -86,7 +101,22 @@
 
 					opacity: 0;
 				}
+				@for $i from 0 through 5 {
+					&:nth-of-type(#{$i + 1}) {
+						transition-delay: 0.1s * $i;
+					}
+				}
 			}
+		}
+	}
+	&.on {
+		h2 {
+			transform: translateY(0px);
+			opacity: 1;
+		}
+		.wrap .pic {
+			transform: translateY(0px);
+			opacity: 1;
 		}
 	}
 }
