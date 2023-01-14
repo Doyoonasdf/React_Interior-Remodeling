@@ -6,7 +6,7 @@ import News from './News';
 import Pics from './Pics';
 import Vids from './Vids';
 import Scroll from './Scroll';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 function Main({ menuOpen }) {
 	const [Scrolled, setScrolled] = useState(0);
@@ -18,7 +18,7 @@ function Main({ menuOpen }) {
 			<Visual currentPos={Pos[0]} />
 			<Information Scrolled={Scrolled} currentPos={Pos[1]} />
 			<Services currentPos={Pos[2]} />
-			<Pics currentPos={Pos[3]} />
+			<Pics Scrolled={Scrolled} currentPos={Pos[3]} />
 			<Vids currentPos={Pos[4]} />
 			<News Scrolled={Scrolled} currentPos={Pos[5]} />
 			<Scroll setScrolled={setScrolled} setPos={setPos} />

@@ -3,7 +3,7 @@
 	width: 100%;
 	height: 100vh;
 	position: relative;
-	padding: 150px 0px 150px;
+	padding: 150px 0px 0px;
 	background-color: #fffcf0;
 	overflow: hidden;
 	.inner {
@@ -13,36 +13,79 @@
 		margin: 0 auto;
 		position: relative;
 		overflow: hidden;
+		h1 {
+			font-size: 150px;
+			font-family: $Engtxt;
+			// color: #eee;
+			color: rgba(235, 213, 69, 0.989);
+			overflow: hidden;
+			position: relative;
+
+			position: absolute;
+			left: 0%;
+		}
 		h2 {
 			text-align: center;
-			font-weight: bold;
-			font-size: 50px;
+			font-weight: 600;
+			font-size: 40px;
 			color: #222;
 			margin-bottom: 50px;
+			font-family: $Engtxt;
 		}
 		.wrap {
-			display: grid;
-			grid-template-columns: 2fr 1fr 1fr;
-			gap: 20px;
+			display: flex;
+			justify-content: center;
 			align-items: center;
+			gap: 20px;
+			position: relative;
+			overflow: hidden;
 			.pic {
 				cursor: pointer;
 				width: 100%;
-				height: 250px;
+				overflow: hidden;
+				//
+				height: calc((1180px) / 4);
+				position: relative;
+				transition: 0.5s;
+				&:hover {
+					transform: translate((-5px, -5px));
+					box-shadow: 10px 10px 0 rgba(235, 213, 69, 0.989);
+					img {
+						filter: grayscale(0.6);
+					}
+					.view {
+						opacity: 1;
+					}
+				}
 				img {
 					height: 100%;
-					object-fit: cover;
+					object-fit: fill;
 					width: 100%;
+					transition: 0.5s;
 					object-position: center;
 				}
-				&:first-of-type {
-					grid-row: 1/3;
-					height: 500px;
+
+				.view {
+					width: 100%;
+					height: calc(100%);
+
+					position: absolute;
+					top: 0;
+					left: 0;
+
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					transition: 0.7s;
+					background: rgba(0, 0, 0, 0.4);
+					color: #fff;
+
+					font-size: 22px;
+					font-family: $Engtxt;
+
+					opacity: 0;
 				}
-			}
-			span {
-				font-size: 20px;
-				// position: absolute;
 			}
 		}
 	}

@@ -1,24 +1,24 @@
 {
   "mainservice": [
     {
-      "pic": "index_services1.jpg",
-      "name": "kids Special Program",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus ipsa excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnistiis! Consequuntur voluptatum omnis culpa dolorem laboriosam molestiae excepum omnis cuneque non optio eligendi?"
+      "pic": "SERVICES1.jpg",
+      "name": "Kids Program",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus ipsa excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnistiis! Consequuntur voluptatum omnis culpa dolorem laboriosam molestiae excepum omnis cuneque non optio eligendi"
     },
     {
-      "pic": "index_services2.jpg",
+      "pic": "SERVICES2.jpg",
       "name": "Youth Program",
       "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus ipsa excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnistiis! Consequuntur voluptatum omnis culpa dolorem laboriosam molestiae excepum omnis culpa dolorem laboriosam molestiae"
     },
     {
-      "pic": "index_services3.jpg",
+      "pic": "SERVICES3.jpg",
       "name": "Adult Program",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus ipsa excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnis culpa dolorem laboriosam molestiae neque non optio eligendi?"
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus ipsa excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnis culpa dolorem laboriosam molestiae neque non optio eligendi"
     },
     {
-      "pic": "index_services4.jpg",
+      "pic": "SERVICES4.png",
       "name": "Docent Tour Program",
-      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus ipsaatibus at ducimus ipsaLorem ipsum dolor sit amet consectetur adipisicin excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnis culpa dolorem laboriosam molestiae neque non optio eligendi?"
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus ipsaatibus at ducimus ipsaLorem ipsum dolor sit amet consectetur adipisicin excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnis culpa dolorem laboriosam molestiae neque non optio eligendi"
     }
   ]
 }
