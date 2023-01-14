@@ -20,6 +20,7 @@
 					font-weight: 600;
 					overflow: hidden;
 					margin-bottom: 10px;
+					font-family: $Engtxt;
 				}
 			}
 
@@ -29,6 +30,8 @@
 				strong {
 					font-size: 22px;
 					color: #222;
+					font-family: $Engtxt;
+					font-weight: 600;
 				}
 				.footerSns {
 					width: 100%;
@@ -68,6 +71,7 @@
 				place-self: flex-end;
 				p {
 					font-size: 13px;
+					font-family: $Engtxt;
 				}
 			}
 		}

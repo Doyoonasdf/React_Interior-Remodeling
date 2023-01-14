@@ -5,7 +5,8 @@
 			width: 100%;
 			padding: 0px 100px;
 			h2 {
-				font-weight: bold;
+				font-weight: 600;
+				font-family: $Engtxt;
 				font-size: 30px;
 				color: #444;
 				margin: 0px 0px 20px;
@@ -19,6 +20,7 @@
 				padding: 10px 20px;
 				margin-bottom: 20px;
 				font-size: 15px;
+				font-family: $Engtxt;
 				color: BLACK;
 				word-break: break-all;
 			}
@@ -35,6 +37,8 @@
 				}
 				label {
 					margin-right: 10px;
+					font-family: $Engtxt;
+					font-weight: 300;
 				}
 				label[for='agree'] {
 					font-size: 20px;
@@ -58,7 +62,7 @@
 				th {
 					width: 20%;
 					border: 0;
-					font-size: 20px;
+					font-size: 15px;
 					font-weight: 500;
 					text-align: center;
 
@@ -96,6 +100,8 @@
 					}
 					select {
 						cursor: pointer;
+						color: #777;
+						padding-left: 5px;
 					}
 					input[type='radio'],
 					input[type='checkbox'] {

@@ -13,8 +13,9 @@
 		padding: 0 10px;
 		h2 {
 			text-align: center;
-			font-weight: bold;
-			font-size: 50px;
+			font-weight: 600;
+			font-family: $Engtxt;
+			font-size: 40px;
 			color: #222;
 			margin-bottom: 50px;
 		}
@@ -44,10 +45,13 @@
 					h5 {
 						font-size: 20px;
 						margin-bottom: 10px;
+						font-family: $Engtxt;
+						font-weight: 600;
 					}
 					p {
 						font-size: 15px;
 						word-break: break-all;
+						font-family: $Engtxt;
 					}
 
 					a {

@@ -8,7 +8,8 @@
 				display: block;
 				font-size: 20px;
 				margin-bottom: 10px;
-				font-weight: bold;
+				font-weight: 600;
+				font-family: $Engtxt;
 			}
 			input[type='text'] {
 				border: 0;
@@ -35,7 +36,9 @@
 				margin-left: 50%;
 				button {
 					text-align: center;
+					font-family: $Engtxt;
 					width: 150px;
+					font-size: 15px;
 					height: 50px;
 					border-radius: 30px;
 					display: inline-block;
@@ -45,6 +48,11 @@
 					cursor: pointer;
 					&:first-of-type {
 						margin-right: 20px;
+					}
+					&:hover {
+						background-color: hsl(58deg 40% 84% / 25%);
+						border: 1px solid rgba(235, 213, 69, 0.989);
+						color: #222;
 					}
 				}
 			}
@@ -69,7 +77,9 @@
 				.txt {
 					width: 100%;
 					h2 {
+						font-weight: 600;
 						margin-bottom: 10px;
+						font-family: $Engtxt;
 					}
 					//수정모드
 					input,

@@ -71,8 +71,10 @@
 			width: 50%;
 			h2 {
 				text-align: center;
-				font-weight: bold;
+				font-family: $Engtxt;
+				font-weight: 600;
 				font-size: 50px;
+				letter-spacing: 1px;
 				color: #444;
 				margin-bottom: 50px;
 			}
@@ -87,6 +89,8 @@
 							width: 20%;
 							padding: 30px 30px;
 							font-size: 20px;
+							font-family: $Engtxt;
+							font-weight: 600;
 							line-height: 1px;
 							color: #666;
 							// text-align: left;
@@ -158,6 +162,8 @@
 						font-size: 16px;
 						text-align: left;
 						cursor: pointer;
+						font-family: $Engtxt;
+						font-weight: 600;
 					}
 					input[type='checkbox'] {
 						margin-right: 15px;
@@ -214,10 +220,13 @@
 			h3 {
 				color: #000;
 				font-size: 22px;
+				font-family: $Engtxt;
+				font-weight: 600;
 			}
 			p {
 				color: #333;
 				font-size: 16px;
+				font-family: $Engtxt;
 			}
 			&:hover {
 				background-color: rgba(235, 213, 69, 0.989);
