@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/React_Interior-Remodeling/static/css/main.42031184.css",
-    "main.js": "/React_Interior-Remodeling/static/js/main.b3bfd6cf.js",
+    "main.css": "/React_Interior-Remodeling/static/css/main.a1d7b559.css",
+    "main.js": "/React_Interior-Remodeling/static/js/main.13774ddd.js",
     "static/media/result.jpg": "/React_Interior-Remodeling/static/media/result.f690e7c8fa436cb15cf5.jpg",
     "index.html": "/React_Interior-Remodeling/index.html",
-    "main.42031184.css.map": "/React_Interior-Remodeling/static/css/main.42031184.css.map",
-    "main.b3bfd6cf.js.map": "/React_Interior-Remodeling/static/js/main.b3bfd6cf.js.map"
+    "main.a1d7b559.css.map": "/React_Interior-Remodeling/static/css/main.a1d7b559.css.map",
+    "main.13774ddd.js.map": "/React_Interior-Remodeling/static/js/main.13774ddd.js.map"
   },
   "entrypoints": [
-    "static/css/main.42031184.css",
-    "static/js/main.b3bfd6cf.js"
+    "static/css/main.a1d7b559.css",
+    "static/js/main.13774ddd.js"
   ]
 }
