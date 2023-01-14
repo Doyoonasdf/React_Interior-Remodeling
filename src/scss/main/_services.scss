@@ -8,10 +8,11 @@
 		margin: 0 auto;
 		h1 {
 			text-align: center;
-			font-weight: bold;
-			font-size: 50px;
+			font-weight: 600;
+			font-size: 40px;
 			color: #222;
 			margin-bottom: 50px;
+			font-family: $Engtxt;
 		}
 	}
 	.inner {
@@ -31,7 +32,8 @@
 					height: 100%;
 					display: block;
 					padding: 1px 41px;
-					font-weight: bold;
+					font-family: $Engtxt;
+					font-weight: 400;
 					font-size: 18px;
 					line-height: 1px;
 					color: black;
@@ -93,7 +95,7 @@
 					img {
 						width: 100%;
 						height: 100%;
-						object-fit: cover;
+						object-fit: fill;
 						transition: 0.5s;
 						border-top-left-radius: 50%;
 						border-top-right-radius: 50%;
@@ -107,10 +109,14 @@
 					height: 500px;
 					position: relative;
 					h2 {
+						font-family: $Engtxt;
+						font-weight: 100;
 						padding: 10px 0px 50px;
 						font-size: 35px;
 					}
 					p {
+						font-family: $Engtxt;
+						font-weight: 100;
 						word-break: break-all;
 						font-size: 20px;
 						width: 100%;

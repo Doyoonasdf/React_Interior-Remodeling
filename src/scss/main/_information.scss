@@ -23,7 +23,7 @@
 			width: 100%;
 			height: 100%;
 			position: relative;
-			margin: 50px auto;
+			margin: 0px auto;
 			overflow: hidden;
 
 			ul {
@@ -70,10 +70,14 @@
 								color: rgba(235, 213, 69, 0.989);
 								font-size: 35px;
 								margin-bottom: 20px;
+								font-family: $Engtxt;
+								font-weight: 100;
 							}
 							p {
 								color: #222;
 								font-size: 20px;
+								font-family: $Engtxt;
+								font-weight: 100;
 							}
 							span {
 								font-size: 18px;
