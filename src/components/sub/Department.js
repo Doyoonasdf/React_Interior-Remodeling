@@ -58,7 +58,12 @@ function Department(end, start = 0, duration = 1000) {
 										src={`${process.env.PUBLIC_URL}/img/depIntroduceFac/${data.pic}`}
 										alt={data.tit}
 									/>
-									<span>{data.tit}</span>
+								</div>
+								<div className='facCon'>
+									<h2>{data.tit}</h2>
+									<span>
+										Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, labore!
+									</span>
 								</div>
 							</article>
 						</div>

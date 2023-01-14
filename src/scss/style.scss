@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Kanit:wght@300;600;900&family=Noto+Sans+KR:wght@100;400;700&display=swap');
 $tablet: 1179px;
-
 $mobile: 674px;
+$Noto: 'Noto Sans KR';
+$Engtxt: 'Kanit';
 
 //common
 @import 'common/footer';
@@ -10,6 +12,7 @@ $mobile: 674px;
 @import 'common/layout';
 @import 'common/modal';
 @import 'common/menu';
+
 //main
 @import 'main/visual';
 @import 'main/information';

@@ -4,14 +4,66 @@
 	transition: 1s;
 	overflow: hidden;
 	background-color: #fffcf0;
+
+	nav {
+		margin-bottom: 10px;
+		width: 100%;
+		display: flex;
+		justify-content: left;
+		flex-wrap: wrap;
+		align-content: flex-start;
+		.branch {
+			display: flex;
+			justify-content: space-between;
+			width: 50%;
+			height: 50%;
+			li {
+				border: 2px solid rgba(235, 213, 69, 0.989);
+				width: 250px;
+				text-align: center;
+				padding: 10px;
+				margin-right: 10px;
+				cursor: pointer;
+				background: #fffcf0;
+				transition: 0.5s ease;
+				font-family: $Noto;
+				font-size: 15px;
+				letter-spacing: 1px;
+				&.on {
+					background: rgba(235, 213, 69, 0.989);
+					color: #333;
+				}
+			}
+			button {
+				width: 50px;
+				background: #efefef;
+				font: bold 12px/1 'arial';
+				color: #333;
+				border: none;
+				cursor: pointer;
+				transition: 1s ease;
+				border-radius: 50%;
+				.car {
+					font-size: 30px;
+					&:hover {
+						color: #fff;
+					}
+				}
+				&:hover {
+					background: rgba(235, 213, 69, 0.989);
+				}
+			}
+		}
+	}
 	.upper {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		width: 100%;
+		margin-bottom: 200px;
 		#map {
 			width: 50%;
-			height: 500px;
+			height: 450px;
 			border: 1px solid #000;
 			margin-bottom: 10px;
 		}
@@ -20,7 +72,7 @@
 			h2 {
 				text-align: center;
 				font-weight: bold;
-				font-size: 60px;
+				font-size: 50px;
 				color: #444;
 				margin-bottom: 50px;
 			}
@@ -124,59 +176,6 @@
 		content: '';
 		display: block;
 		clear: both;
-	}
-	nav {
-		margin-bottom: 100px;
-		width: 100%;
-		display: flex;
-		justify-content: left;
-		flex-wrap: wrap;
-		align-content: flex-start;
-		.branch {
-			display: flex;
-			justify-content: space-between;
-			width: 50%;
-			height: 50%;
-
-			// padding-left: 50px;
-			li {
-				border: 3px solid rgba(235, 213, 69, 0.989);
-				width: 250px;
-				padding: 5px;
-				text-align: center;
-				padding: 15px;
-				margin-right: 10px;
-				cursor: pointer;
-				background: #fffcf0;
-				transition: 0.5s ease;
-				&.on {
-					background: rgba(235, 213, 69, 0.989);
-					color: #333;
-				}
-			}
-			button {
-				// margin-left: 10%;
-				width: 60px;
-				background: #efefef;
-				font: bold 12px/1 'arial';
-				color: #333;
-				// border: 2px solid rgba(235, 213, 69, 0.989);
-				border: none;
-				cursor: pointer;
-				transition: 1s ease;
-				border-radius: 50%;
-				.car {
-					font-size: 40px;
-					&:hover {
-						// color: #444;
-						color: #fff;
-					}
-				}
-				&:hover {
-					background: rgba(235, 213, 69, 0.989);
-				}
-			}
-		}
 	}
 
 	.contbox {

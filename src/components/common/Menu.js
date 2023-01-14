@@ -56,7 +56,7 @@ function Menu() {
 						</li>
 						<li>
 							<NavLink to='/join' activeStyle={active}>
-								Member
+								Join
 							</NavLink>
 						</li>
 						<li>

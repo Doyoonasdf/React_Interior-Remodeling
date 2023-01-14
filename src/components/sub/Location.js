@@ -159,6 +159,32 @@ function Location() {
 
 	return (
 		<Layout name={'location'} h1name={'CONTACT US'} subtit={'찾아오시는길'}>
+			<nav>
+				<ul className='branch'>
+					{MarkerOptions.map((el, idx) => {
+						let isOn = '';
+						branch_btns === idx && (isOn = 'on');
+						return (
+							<li
+								key={idx}
+								className={isOn}
+								onClick={() => {
+									setBranch_btns(idx);
+									setTraffic(false);
+								}}
+							>
+								{el.title}
+								<p>{el.address}</p>
+							</li>
+						);
+					})}
+					<button onClick={() => setTraffic(!Traffic)}>
+						{/* {!Traffic ? 'Traffic ON' : 'Traffic OFF'} */}
+						<FontAwesomeIcon icon={faCar} className='car' />
+					</button>
+				</ul>
+			</nav>
+
 			<div className='upper'>
 				<div id='map' ref={mapContainer}></div>
 				<div className='QuickJoin'>
@@ -247,32 +273,6 @@ function Location() {
 					</form>
 				</div>
 			</div>
-
-			<nav>
-				<ul className='branch'>
-					{MarkerOptions.map((el, idx) => {
-						let isOn = '';
-						branch_btns === idx && (isOn = 'on');
-						return (
-							<li
-								key={idx}
-								className={isOn}
-								onClick={() => {
-									setBranch_btns(idx);
-									setTraffic(false);
-								}}
-							>
-								{el.title}
-								<p>{el.address}</p>
-							</li>
-						);
-					})}
-					<button onClick={() => setTraffic(!Traffic)}>
-						{/* {!Traffic ? 'Traffic ON' : 'Traffic OFF'} */}
-						<FontAwesomeIcon icon={faCar} className='car' />
-					</button>
-				</ul>
-			</nav>
 
 			<div className='contbox'>
 				<article>

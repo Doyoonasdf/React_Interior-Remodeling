@@ -1,9 +1,9 @@
 .result {
 	width: 100%;
-
+	padding: 0px;
 	> .inner {
 		width: 100%;
-		padding: 0px 0 230px;
+		padding: 0px 0px 230px;
 		.wrap {
 			width: 100%;
 			height: 600px;
@@ -18,7 +18,6 @@
 				float: left;
 				position: relative;
 				background-color: rgba(235, 213, 69, 0.989);
-
 				.textBox {
 					width: 590px;
 					position: absolute;
@@ -26,32 +25,39 @@
 					top: 0;
 					padding: 100px 50px 0px 0px;
 					h2 {
-						font-size: 25px;
+						padding-left: 20px;
+						font-size: 28px;
+						font-family: $Noto;
 						color: #444;
 						margin-bottom: 40px;
 						font-weight: 400;
 						span {
+							font-family: $Noto;
 							color: #000;
 							font-size: 32px;
 							font-weight: 600;
 						}
 					}
 					.openInfo {
-						padding: 40px 30px;
+						padding: 25px;
 						background-color: rgba(231, 229, 198, 0.596);
-						border: 1px solid rgb(244, 222, 82);
+						// border: 1px solid rgb(244, 222, 82);
 						h2 {
+							font-family: $Noto;
+							padding-left: 0px;
 							font-size: 25px;
 							color: #000;
 							margin-bottom: 15px;
 							font-weight: 600;
 						}
 						p {
+							font-family: $Noto;
 							font-size: 20px;
 							color: #666;
 							font-weight: 500;
 						}
 						span {
+							font-family: $Noto;
 							font-size: 30px;
 							color: #333;
 							margin-bottom: 20px;
@@ -66,6 +72,7 @@
 				height: 100%;
 				float: left;
 				position: relative;
+
 				.imgBox {
 					width: 100%;
 					height: 100%;

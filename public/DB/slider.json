@@ -1,31 +1,31 @@
 {
   "slider": [
     {
-      "tit": "1Vincent van Gogh",
-      "desc": "1Vincent van Gogh (1853–1890) is world amous. Learn about his life, read his letters,   or explore his paintings and drawings. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus consequuntur impedit nulla laborum id deserunt nostrum illum maiores natus expedita!",
-      "pic": "member1.jpg",
+      "tit": "Vincent van Gogh",
+      "desc": "Vincent van Gogh (1853–1890) is world amous. Learn about his life, read his letters,or explore his paintings and drawings. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus consequuntur impedit nulla laborum id deserunt nostrum illum maiores natus expedita!",
+      "pic": "EXHIBITION1.jpg",
       "date": "2022.12.24 - 2023.03.26",
       "res": "예약하기"
     },
     {
-      "tit": "2Vincent van Gogh",
-      "desc": "2Vincent van Gogh (1853–1890) is world amous. Learn about his life, read his letters,   or explore his paintings and drawings. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus consequuntur impedit nulla laborum id deserunt nostrum illum maiores natus expedita!",
-      "pic": "member1.jpg",
-      "date": "2022.12.24 - 2023.03.26",
+      "tit": "Henri Matisse",
+      "desc": "Exhibiting the life and art of Henri Matisse, whose influence transcends the 20th century and continues to this day, crossing line, light, and color Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus consequuntur impedit nulla laborum natus expedita!",
+      "pic": "EXHIBITION4.jpg",
+      "date": "2023.01.04 - 2023.02.27",
       "res": "예약하기"
     },
     {
-      "tit": "3Vincent van Gogh",
-      "desc": "3Vincent van Gogh (1853–1890) is world amous. Learn about his life, read his letters,   or explore his paintings and drawings. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus consequuntur impedit nulla laborum id deserunt nostrum illum maiores natus expedita!",
+      "tit": "Mylène Jampanoï",
+      "desc": "Mylène Jampanoï is a world-famous female installation artist, and is exhibiting for the first time in Korea.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus consequuntur impedit nulla laborum natus expedita!",
       "pic": "member1.jpg",
-      "date": "2022.12.24 - 2023.03.26",
+      "date": "2023.01.24 - 2023.03.28",
       "res": "예약하기"
     },
     {
-      "tit": "4Vincent van Gogh",
-      "desc": "4Vincent van Gogh (1853–1890) is world amous. Learn about his life, read his letters,   or explore his paintings and drawings. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus consequuntur impedit nulla laborum id deserunt nostrum illum maiores natus expedita!",
-      "pic": "member1.jpg",
-      "date": "2022.12.24 - 2023.03.26",
+      "tit": "Wild flowers in Korea",
+      "desc": "This exhibition is a wild flower photo exhibition that presents to tourists photos of wild flowers blooming in Korea at camera angles. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus consequuntur impedit nulla laborum id deserunt nostrum illum maiores natus expedita!",
+      "pic": "EXHIBITION2.jpg",
+      "date": "2023.02.24 - 2023.03.26",
       "res": "예약하기"
     }
   ]
