@@ -1,6 +1,7 @@
 import Layout from '../common/Layout';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+
 function Department(end, start = 0, duration = 1000) {
 	const path = process.env.PUBLIC_URL;
 	const [Fac, setFac] = useState([]);
@@ -52,7 +53,8 @@ function Department(end, start = 0, duration = 1000) {
 				{Fac.map((data, idx) => {
 					return (
 						<div className='facBox' key={idx}>
-							<article key={idx}>
+							{/* <article key={idx}> */}
+							<article>
 								<div className='facPic'>
 									<img
 										src={`${process.env.PUBLIC_URL}/img/depIntroduceFac/${data.pic}`}

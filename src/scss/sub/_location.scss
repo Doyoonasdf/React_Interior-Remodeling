@@ -107,16 +107,14 @@
 								font-size: 14px;
 								line-height: 1px;
 								color: #fff;
-								margin-top: 20px;
+								margin-top: 15px;
 							}
 							p {
 								font-size: 12px;
-
 								font-weight: bold;
 								color: rgba(235, 213, 69, 0.989);
-								margin-top: 5px;
-								text-align: left;
-								padding-left: 13%;
+								margin-top: 10px;
+								text-align: center;
 							}
 						}
 						td {
@@ -169,7 +167,6 @@
 						margin-right: 15px;
 						width: 15px;
 						cursor: pointer;
-						height: 15px;
 
 						vertical-align: center;
 					}
@@ -235,6 +232,145 @@
 				.phone,
 				.env {
 					scale: (1.2);
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	//1179
+	.location {
+		.upper {
+			.QuickJoin {
+				h2 {
+					margin-bottom: 0px;
+				}
+				form {
+					fieldset {
+						table {
+							th {
+								padding: 30px 0px;
+								font-size: 18px;
+							}
+							td {
+								input[type='text'] {
+									font-size: 15px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: $tabletMini) {
+	//840
+	.location {
+		nav {
+			.branch {
+				width: 100%;
+				button {
+					.car {
+						font-size: 20px;
+					}
+				}
+			}
+		}
+		.upper {
+			margin-bottom: 50px;
+			#map {
+				flex: 1 100%;
+				margin-bottom: 50px;
+			}
+			.QuickJoin {
+				background-color: #fffff7;
+				flex: 1 100%;
+				h2 {
+					font-size: 40px;
+					margin-bottom: 0px;
+				}
+				form {
+					fieldset {
+						padding: 15px 0px;
+						table {
+							td {
+								padding: 10px 0px;
+								background-color: #fffff7;
+								#tell {
+									background-color: #fffff7;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.contbox {
+			flex-wrap: wrap;
+			article {
+				margin-right: 0px;
+				height: auto;
+				margin-bottom: 50px;
+
+				.loct,
+				.phone,
+				.env {
+					font-size: 20px;
+					margin-bottom: 10px;
+				}
+				h3 {
+					font-size: 20px;
+					margin-bottom: 10px;
+				}
+				p {
+					font-size: 15px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: $mobile) {
+	//480
+	.location {
+		.upper {
+			.QuickJoin {
+				h2 {
+					font-size: 35px;
+				}
+				form {
+					fieldset {
+						table {
+							th {
+								font-size: 15px;
+								padding: 30px 10px 30px 0px;
+								input[type='submit'] {
+									margin-left: 0px;
+								}
+							}
+							td {
+								input[type='text'] {
+									font-size: 14px;
+								}
+								#tell {
+									padding: 5px 0px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		nav {
+			.branch {
+				li {
+					width: 150px;
+				}
+				button {
+					.car {
+						font-size: 18px;
+					}
 				}
 			}
 		}

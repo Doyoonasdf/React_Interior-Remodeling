@@ -263,8 +263,8 @@ function Location() {
 										<th colSpan={2}>
 											<input type='checkbox' name='agree' id='agree' onChange={handleAgree} />
 											<label htmlFor='agree'>Agree with this contract </label>
-											<input type='submit' value='SUBMIT' />
 											<p className='err'>{Err.agree}</p>
+											<input type='submit' value='SUBMIT' />
 										</th>
 									</tr>
 								</tbody>

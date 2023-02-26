@@ -127,3 +127,38 @@
 		}
 	}
 }
+
+@media screen and (max-width: $tablet) {
+	//1179
+	.community > .inner .inputBox {
+		width: 100%;
+	}
+	.community > .inner .inputBox .btnSet {
+		margin-left: 0;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: $tabletMini) {
+	//840
+	.community > .inner .showBox article {
+		flex: 1 100%;
+		.txt {
+			padding: 40px 20px;
+		}
+		.btnSet {
+			padding-right: 30px;
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	//480
+
+	.community > .inner .inputBox .btnSet button {
+		width: 100px;
+	}
+	.community > .inner .showBox article .btnSet {
+		padding-bottom: 30px;
+	}
+}

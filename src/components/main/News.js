@@ -62,7 +62,7 @@ function News({ Scrolled, currentPos }) {
 				// 	opacity: 1 - scroll / 150,
 				// }}
 				>
-					Question and Answer
+					NEWS
 				</h2>
 				<div className='QA'>
 					<div className='wrap'>

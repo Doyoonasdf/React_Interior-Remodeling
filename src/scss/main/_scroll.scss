@@ -27,3 +27,10 @@
 		}
 	}
 }
+
+@media screen and (max-width: $tablet) {
+	//1179
+	.Scroll {
+		display: none;
+	}
+}

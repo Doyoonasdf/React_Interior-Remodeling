@@ -107,6 +107,7 @@ function Gallery() {
 												src={`https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`}
 												alt={item.title}
 											/>
+											<div className='view'>VIEW</div>
 										</div>
 
 										<div className='conBox'>

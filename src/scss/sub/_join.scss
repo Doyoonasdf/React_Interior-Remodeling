@@ -136,14 +136,13 @@
 }
 
 @media screen and (max-width: $tablet) {
+	//1179
 	.join {
 		.inner {
 			.wrap {
 				max-width: 1180px;
 				padding: 0px 10px;
-				h2 {
-					line-height: 0px;
-				}
+
 				#terms {
 					height: 100%;
 				}
@@ -178,10 +177,43 @@
 	}
 }
 
-@media screen and (max-width: $mobile) {
+@media screen and (max-width: 590px) {
 	.join {
 		.inner {
 			.wrap {
+				table {
+					th {
+						input[type='reset'],
+						input[type='submit'] {
+							margin: 0px 10px;
+						}
+					}
+					td {
+						padding: 15px 0px;
+						label {
+							margin-right: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+	// .join .inner .wrap table th input[type='reset'],
+	// .join .inner .wrap table th input[type='submit'] {
+	// 	margin: 0px 10px;
+	// }
+}
+
+@media screen and (max-width: $mobile) {
+	//480
+	.join {
+		.inner {
+			.wrap {
+				.agreement {
+					label[for='agree'] {
+						font-size: 16px;
+					}
+				}
 				table {
 					th {
 						width: 30%;
@@ -190,7 +222,7 @@
 						input[type='text'],
 						input[type='password'],
 						select {
-							width: 80%;
+							width: 90%;
 							background: rgba(0, 0, 0, 0.03);
 							padding: 10px;
 							border: 1px solid #aaa;

@@ -8,7 +8,11 @@ function Visual() {
 					<img src={path + '/img/mainvisual/main.jpg'} alt='main' />
 				</div>
 				<div className='txt'>
-					<h2>MOR Museum Art</h2>
+					<h2>
+						MOR <br />
+						Museum <br />
+						Art
+					</h2>
 					<h3> 2022.12.24 - 2023.03.26</h3>
 				</div>
 			</div>

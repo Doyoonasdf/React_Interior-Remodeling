@@ -6,9 +6,13 @@
 		overflow: hidden;
 		padding: 20px 50px 20px;
 		position: relative;
-		width: 1180px;
+		width: 100%;
+		max-width: 1180px;
+		position: relative;
+		padding: 0 10px;
 		.footerWrap {
 			display: flex;
+			flex-wrap: wrap;
 			position: relative;
 			justify-content: space-around;
 			align-items: flex-start;
@@ -75,5 +79,24 @@
 				}
 			}
 		}
+	}
+}
+@media screen and (max-width: $tablet) {
+	//1179
+	#footer {
+		padding: 50px 0px;
+	}
+	#footer .inner .footerWrap {
+		display: block;
+		text-align: center;
+	}
+	#footer .inner .footerWrap .secondBox .footerSns {
+		justify-content: center;
+	}
+	#footer .inner .footerWrap .thirdBox {
+		align-items: center;
+	}
+	#footer address {
+		padding: 10px 0px;
 	}
 }

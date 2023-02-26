@@ -55,7 +55,9 @@ function Services() {
 								<div className='txt'>
 									<h2>{data.name}</h2>
 									<p>{data.content}</p>
-									<Link to='#'>VIEW MORE</Link>
+									<div className='btn'>
+										<Link to='#'>View More</Link>
+									</div>
 								</div>
 							</article>
 						);

@@ -1,6 +1,6 @@
 .content {
 	background-color: #fffcf0;
-	padding: 150px 0px 250px;
+	padding: 230px 0px 150px;
 	figure {
 		width: 100%;
 		height: 250px;
@@ -8,23 +8,22 @@
 		opacity: 0;
 		transition: 1s;
 		position: relative;
-		h1 {
-			position: absolute;
-			bottom: 40%;
-			right: 10%;
-			width: 100%;
-			font-size: 70px;
-			max-width: 1280px;
-			z-index: 2;
-			text-align: left;
-			font-family: $Engtxt;
-			color: #333;
+		.inner {
+			h1 {
+				width: 100%;
+				font-size: 70px;
+				max-width: 1280px;
+				z-index: 2;
+				text-align: left;
+				font-family: $Engtxt;
+				color: #333;
+			}
 		}
 	}
 	> .inner {
-		max-width: 1180px;
+		max-width: 1220px;
 		min-height: 400px;
-		padding: 0 10px;
+		padding: 0 20px;
 		margin: 0 auto;
 		position: relative;
 		opacity: 0;
@@ -44,14 +43,31 @@
 }
 
 @media screen and (max-width: $tablet) {
+	//1179
+	.content {
+		padding: 180px 0px 110px;
+		> .inner {
+			padding: 0 10px;
+		}
+	}
+}
+
+@media screen and (max-width: $tabletMini) {
+	//840
+	.content {
+		padding: 140px 0px 70px;
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	//480
 	.content {
 		figure {
-			height: 200px;
-		}
-		> .inner {
-			width: 100%;
-			margin: 80px auto 120px;
-			padding: 0px 40px;
+			.inner {
+				h1 {
+					font-size: 50px;
+				}
+			}
 		}
 	}
 }
